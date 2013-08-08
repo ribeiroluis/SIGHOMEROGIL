@@ -197,6 +197,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UBSHOMEROGILDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Acolhimento\frmInserirVagas.resx">
+      <DependentUpon>frmInserirVagas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\frmGerenciaUsuarios.resx">
       <DependentUpon>frmGerenciaUsuarios.cs</DependentUpon>
     </EmbeddedResource>

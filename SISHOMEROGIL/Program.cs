@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using SISHOMEROGIL.Administrador;
 using SISHOMEROGIL.Recepcao;
+using SISHOMEROGIL.Acolhimento;
 
 namespace SISHOMEROGIL
 {
@@ -17,8 +18,8 @@ namespace SISHOMEROGIL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-            Application.Run(new frmTelaSplash());
-            //Application.Run(new frmEstoqueFarmacia(1));
+            //Application.Run(new frmTelaSplash());
+            Application.Run(new frmInserirVagas());
         }
     }
 }
