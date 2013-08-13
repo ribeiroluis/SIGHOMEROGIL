@@ -23,21 +23,19 @@ namespace SISHOMEROGIL.Acolhimento
         {
             try
             {
-                if (!PesquisaAgenda())
+                MEDICOSTableAdapter medicos = new MEDICOSTableAdapter();
+                DataTable tbMedicos = medicos.GetData();
+                foreach (DataRow linha in tbMedicos.Rows)
                 {
-                    MEDICOSTableAdapter medicos = new MEDICOSTableAdapter();
-                    DataTable tbMedicos = medicos.GetData();
-                    foreach (DataRow linha in tbMedicos.Rows)
-                    {
-                        string nome = linha["NOME"].ToString();
-                        int id = (int)linha["IDMEDICO"];
-                        InsereMovimento(nome, id);
-                    } 
+                    progressBar1.Value = 0;
+                    GeraData();
+                    string nome = linha["NOME"].ToString();
+                    int id = (int)linha["IDMEDICO"];
+                    InsereMovimento(nome, id);
                 }
-                else
-                    MessageBox.Show("Já há vagas cadastradas para este período");
-
-            }
+                progressBar1.Value = 100;
+                MessageBox.Show("Vagas geradas com sucesso");
+            }                            
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
@@ -49,7 +47,7 @@ namespace SISHOMEROGIL.Acolhimento
         /// Pesquisa se já foi cadastrado agenda
         /// </summary>
         /// <returns>Verdadeiro: se já existe vagas para o mes, Falso: se não há vagas para o mês.</returns>
-        private bool PesquisaAgenda()
+        private void GeraData()
         {
             try
             {
@@ -78,18 +76,11 @@ namespace SISHOMEROGIL.Acolhimento
                 }
 
                 dataInicio = diaInicio + Mes + Ano;
-                dataFim = diaFim + Mes + Ano;
-                MOVIMENTOTableAdapter movimento = new MOVIMENTOTableAdapter();
-                int cont = (int)movimento.ContaMovimento(dataInicio, dataFim);
-                if (cont > 0)
-                    return true;
-                else
-                    return false;
+                dataFim = diaFim + Mes + Ano;                
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
-                return false;
             }
         }
 
@@ -99,27 +90,36 @@ namespace SISHOMEROGIL.Acolhimento
             {
                 DateTime dtInicio = DateTime.Parse(dataInicio);
                 DateTime dtFim = DateTime.Parse(dataFim);
-                TimeSpan dias = dtFim - dtInicio;                
+                TimeSpan dias = dtFim - dtInicio;
+                MOVIMENTOTableAdapter movimento;
+                VAGASTableAdapter vagas;
                 int dia = dtInicio.Day;
                 int mes = dtInicio.Month;
                 int ano = dtInicio.Year;
                 for (int i = 0; i <= dias.Days; i++)
                 {
+                    progressBar1.Value += 3;
                     string _data = dia + "/" + mes + "/" + ano;
                     dtInicio = DateTime.Parse(_data);
-                    MOVIMENTOTableAdapter movimento = new MOVIMENTOTableAdapter();
-                    movimento.Insert(_idMedico, dtInicio, null);
-                    int idMovimento = (int)movimento.RetornaUltimoID();
-                    //int idMovimento = 1;
-                    InsereVagas(idMovimento, dtInicio, _nome);
+                    movimento = new MOVIMENTOTableAdapter();
+                    int qtdMovimento = (int)movimento.ContaMovimento(dtInicio.ToShortDateString(),_idMedico);
+                    if (qtdMovimento == 0)
+                    {
+                        movimento.Insert(_idMedico, dtInicio, null);
+                        int idMovimento = (int)movimento.RetornaUltimoID();
+                        //int idMovimento = 1;
+                        InsereVagas(idMovimento, dtInicio, _nome);
+                        vagas = new VAGASTableAdapter();
+                        int qtdVagas = (int)vagas.ContaVagas(idMovimento);
+                        if (qtdVagas < 1)
+                            movimento.DeletaMovimentoNulo(idMovimento);
+                        else
+                            movimento.AtualizaNumVagas(qtdVagas, idMovimento);
+                    }
+
                     dia++;
-                    
-                    
                 }
-
-
-                
-                
+                progressBar1.Value = 100;
             }
             catch (Exception err)
             {
@@ -155,7 +155,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else 
                                                 hora = TimeSpan.Parse("16:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null,null);
                                         }
  
                                     }break;
@@ -175,7 +175,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
 
                                     } break;
@@ -195,7 +195,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
 
                                     } break;
@@ -228,7 +228,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }} break;
                                 #endregion
                                     
@@ -248,7 +248,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -269,7 +269,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:00");
 
-                                            //vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -290,7 +290,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -320,7 +320,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("16:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -341,7 +341,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion  
@@ -360,7 +360,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("16:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion  
@@ -387,7 +387,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("16:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -406,7 +406,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("12:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                         for (int i = 1; i <= 16; i++)
                                         {
@@ -419,7 +419,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("14:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -438,7 +438,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("16:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -468,7 +468,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -487,7 +487,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -506,7 +506,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -525,7 +525,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("10:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -553,7 +553,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("09:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -570,7 +570,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("09:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -587,7 +587,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("09:00");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -615,7 +615,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -632,7 +632,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("14:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -649,7 +649,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion
@@ -666,7 +666,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else
                                                 hora = TimeSpan.Parse("11:30");
 
-                                            vagas.Insert(idMovimento, hora, null, null);
+                                            vagas.Insert(idMovimento, hora, null, null, null);
                                         }
                                     } break;
                                 #endregion

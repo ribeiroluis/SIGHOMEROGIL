@@ -9,6 +9,9 @@
 }
 
 namespace SISHOMEROGIL.BancoDados.MovimentoDiarioTableAdapters {
+    partial class VAGASTableAdapter
+    {
+    }
     
     
     public partial class MOVIMENTOTableAdapter {

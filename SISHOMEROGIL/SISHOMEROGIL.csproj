@@ -89,6 +89,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Recepcao\Controles\PacienteFirebird.cs" />
     <Compile Include="Acolhimento\frmInserirVagas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +183,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recepcao\Controles\DarumaFramework_Declaracoes_CSharp.cs" />
     <Compile Include="Recepcao\Controles\Imprimir.cs" />
+    <Compile Include="Recepcao\frmMovimentoDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recepcao\frmMovimentoDiario.Designer.cs">
+      <DependentUpon>frmMovimentoDiario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recepcao\frmSenhas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +253,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Recepcao\frmMovimentoDiario.resx">
+      <DependentUpon>frmMovimentoDiario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recepcao\frmSenhas.resx">
       <DependentUpon>frmSenhas.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,7 +366,9 @@
     <Content Include="Resources\brasaobetim.ico" />
     <None Include="Resources\Search.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Acolhimento\Controles\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

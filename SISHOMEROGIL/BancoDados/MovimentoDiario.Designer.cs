@@ -32,6 +32,8 @@ namespace SISHOMEROGIL.BancoDados {
         
         private VAGASDataTable tableVAGAS;
         
+        private ViewMovimentoDiaDataTable tableViewMovimentoDia;
+        
         private global::System.Data.DataRelation relationFK_DESISTEN_REFERENCE_MOVIMENT;
         
         private global::System.Data.DataRelation relationFK_MOVIMENT_REFERENCE_MEDICOS;
@@ -77,6 +79,9 @@ namespace SISHOMEROGIL.BancoDados {
                 }
                 if ((ds.Tables["VAGAS"] != null)) {
                     base.Tables.Add(new VAGASDataTable(ds.Tables["VAGAS"]));
+                }
+                if ((ds.Tables["ViewMovimentoDia"] != null)) {
+                    base.Tables.Add(new ViewMovimentoDiaDataTable(ds.Tables["ViewMovimentoDia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -133,6 +138,16 @@ namespace SISHOMEROGIL.BancoDados {
         public VAGASDataTable VAGAS {
             get {
                 return this.tableVAGAS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ViewMovimentoDiaDataTable ViewMovimentoDia {
+            get {
+                return this.tableViewMovimentoDia;
             }
         }
         
@@ -215,6 +230,9 @@ namespace SISHOMEROGIL.BancoDados {
                 if ((ds.Tables["VAGAS"] != null)) {
                     base.Tables.Add(new VAGASDataTable(ds.Tables["VAGAS"]));
                 }
+                if ((ds.Tables["ViewMovimentoDia"] != null)) {
+                    base.Tables.Add(new ViewMovimentoDiaDataTable(ds.Tables["ViewMovimentoDia"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -272,6 +290,12 @@ namespace SISHOMEROGIL.BancoDados {
                     this.tableVAGAS.InitVars();
                 }
             }
+            this.tableViewMovimentoDia = ((ViewMovimentoDiaDataTable)(base.Tables["ViewMovimentoDia"]));
+            if ((initTable == true)) {
+                if ((this.tableViewMovimentoDia != null)) {
+                    this.tableViewMovimentoDia.InitVars();
+                }
+            }
             this.relationFK_DESISTEN_REFERENCE_MOVIMENT = this.Relations["FK_DESISTEN_REFERENCE_MOVIMENT"];
             this.relationFK_MOVIMENT_REFERENCE_MEDICOS = this.Relations["FK_MOVIMENT_REFERENCE_MEDICOS"];
             this.relationFK_VAGAS_REFERENCE_MOVIMENT = this.Relations["FK_VAGAS_REFERENCE_MOVIMENT"];
@@ -293,6 +317,8 @@ namespace SISHOMEROGIL.BancoDados {
             base.Tables.Add(this.tableMOVIMENTO);
             this.tableVAGAS = new VAGASDataTable();
             base.Tables.Add(this.tableVAGAS);
+            this.tableViewMovimentoDia = new ViewMovimentoDiaDataTable();
+            base.Tables.Add(this.tableViewMovimentoDia);
             this.relationFK_DESISTEN_REFERENCE_MOVIMENT = new global::System.Data.DataRelation("FK_DESISTEN_REFERENCE_MOVIMENT", new global::System.Data.DataColumn[] {
                         this.tableMOVIMENTO.IDMOVIMENTOColumn}, new global::System.Data.DataColumn[] {
                         this.tableDESISTENCIAS.IDMOVIMENTOColumn}, false);
@@ -328,6 +354,12 @@ namespace SISHOMEROGIL.BancoDados {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeVAGAS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeViewMovimentoDia() {
             return false;
         }
         
@@ -397,6 +429,9 @@ namespace SISHOMEROGIL.BancoDados {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void VAGASRowChangeEventHandler(object sender, VAGASRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ViewMovimentoDiaRowChangeEventHandler(object sender, ViewMovimentoDiaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1351,6 +1386,8 @@ namespace SISHOMEROGIL.BancoDados {
             
             private global::System.Data.DataColumn columnNOME;
             
+            private global::System.Data.DataColumn columnSENHAENTREGUE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VAGASDataTable() {
@@ -1426,6 +1463,14 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SENHAENTREGUEColumn {
+                get {
+                    return this.columnSENHAENTREGUE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1461,14 +1506,15 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VAGASRow AddVAGASRow(MOVIMENTORow parentMOVIMENTORowByFK_VAGAS_REFERENCE_MOVIMENT, System.TimeSpan HORARIO, string PRONTUARIO, string NOME) {
+            public VAGASRow AddVAGASRow(MOVIMENTORow parentMOVIMENTORowByFK_VAGAS_REFERENCE_MOVIMENT, System.TimeSpan HORARIO, string PRONTUARIO, string NOME, byte SENHAENTREGUE) {
                 VAGASRow rowVAGASRow = ((VAGASRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         HORARIO,
                         PRONTUARIO,
-                        NOME};
+                        NOME,
+                        SENHAENTREGUE};
                 if ((parentMOVIMENTORowByFK_VAGAS_REFERENCE_MOVIMENT != null)) {
                     columnValuesArray[1] = parentMOVIMENTORowByFK_VAGAS_REFERENCE_MOVIMENT[0];
                 }
@@ -1506,6 +1552,7 @@ namespace SISHOMEROGIL.BancoDados {
                 this.columnHORARIO = base.Columns["HORARIO"];
                 this.columnPRONTUARIO = base.Columns["PRONTUARIO"];
                 this.columnNOME = base.Columns["NOME"];
+                this.columnSENHAENTREGUE = base.Columns["SENHAENTREGUE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1521,6 +1568,8 @@ namespace SISHOMEROGIL.BancoDados {
                 base.Columns.Add(this.columnPRONTUARIO);
                 this.columnNOME = new global::System.Data.DataColumn("NOME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOME);
+                this.columnSENHAENTREGUE = new global::System.Data.DataColumn("SENHAENTREGUE", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENHAENTREGUE);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDVAGA}, true));
                 this.columnIDVAGA.AutoIncrement = true;
@@ -1617,6 +1666,313 @@ namespace SISHOMEROGIL.BancoDados {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "VAGASDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ViewMovimentoDiaDataTable : global::System.Data.TypedTableBase<ViewMovimentoDiaRow> {
+            
+            private global::System.Data.DataColumn columnDATA;
+            
+            private global::System.Data.DataColumn columnMEDICO;
+            
+            private global::System.Data.DataColumn columnHORARIO;
+            
+            private global::System.Data.DataColumn columnPRONTUARIO;
+            
+            private global::System.Data.DataColumn columnPACIENTE;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ViewMovimentoDiaDataTable() {
+                this.TableName = "ViewMovimentoDia";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ViewMovimentoDiaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ViewMovimentoDiaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DATAColumn {
+                get {
+                    return this.columnDATA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MEDICOColumn {
+                get {
+                    return this.columnMEDICO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HORARIOColumn {
+                get {
+                    return this.columnHORARIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PRONTUARIOColumn {
+                get {
+                    return this.columnPRONTUARIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PACIENTEColumn {
+                get {
+                    return this.columnPACIENTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ViewMovimentoDiaRow this[int index] {
+                get {
+                    return ((ViewMovimentoDiaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ViewMovimentoDiaRowChangeEventHandler ViewMovimentoDiaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ViewMovimentoDiaRowChangeEventHandler ViewMovimentoDiaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ViewMovimentoDiaRowChangeEventHandler ViewMovimentoDiaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ViewMovimentoDiaRowChangeEventHandler ViewMovimentoDiaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddViewMovimentoDiaRow(ViewMovimentoDiaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ViewMovimentoDiaRow AddViewMovimentoDiaRow(System.DateTime DATA, string MEDICO, System.TimeSpan HORARIO, string PRONTUARIO, string PACIENTE) {
+                ViewMovimentoDiaRow rowViewMovimentoDiaRow = ((ViewMovimentoDiaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        DATA,
+                        MEDICO,
+                        HORARIO,
+                        PRONTUARIO,
+                        PACIENTE};
+                rowViewMovimentoDiaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowViewMovimentoDiaRow);
+                return rowViewMovimentoDiaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ViewMovimentoDiaDataTable cln = ((ViewMovimentoDiaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ViewMovimentoDiaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnDATA = base.Columns["DATA"];
+                this.columnMEDICO = base.Columns["MEDICO"];
+                this.columnHORARIO = base.Columns["HORARIO"];
+                this.columnPRONTUARIO = base.Columns["PRONTUARIO"];
+                this.columnPACIENTE = base.Columns["PACIENTE"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnDATA = new global::System.Data.DataColumn("DATA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA);
+                this.columnMEDICO = new global::System.Data.DataColumn("MEDICO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMEDICO);
+                this.columnHORARIO = new global::System.Data.DataColumn("HORARIO", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHORARIO);
+                this.columnPRONTUARIO = new global::System.Data.DataColumn("PRONTUARIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRONTUARIO);
+                this.columnPACIENTE = new global::System.Data.DataColumn("PACIENTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPACIENTE);
+                this.columnMEDICO.AllowDBNull = false;
+                this.columnMEDICO.MaxLength = 250;
+                this.columnPRONTUARIO.MaxLength = 10;
+                this.columnPACIENTE.MaxLength = 200;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ViewMovimentoDiaRow NewViewMovimentoDiaRow() {
+                return ((ViewMovimentoDiaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ViewMovimentoDiaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ViewMovimentoDiaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ViewMovimentoDiaRowChanged != null)) {
+                    this.ViewMovimentoDiaRowChanged(this, new ViewMovimentoDiaRowChangeEvent(((ViewMovimentoDiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ViewMovimentoDiaRowChanging != null)) {
+                    this.ViewMovimentoDiaRowChanging(this, new ViewMovimentoDiaRowChangeEvent(((ViewMovimentoDiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ViewMovimentoDiaRowDeleted != null)) {
+                    this.ViewMovimentoDiaRowDeleted(this, new ViewMovimentoDiaRowChangeEvent(((ViewMovimentoDiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ViewMovimentoDiaRowDeleting != null)) {
+                    this.ViewMovimentoDiaRowDeleting(this, new ViewMovimentoDiaRowChangeEvent(((ViewMovimentoDiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveViewMovimentoDiaRow(ViewMovimentoDiaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                MovimentoDiario ds = new MovimentoDiario();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ViewMovimentoDiaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2144,6 +2500,22 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte SENHAENTREGUE {
+                get {
+                    try {
+                        return ((byte)(this[this.tableVAGAS.SENHAENTREGUEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SENHAENTREGUE\' in table \'VAGAS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVAGAS.SENHAENTREGUEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public MOVIMENTORow MOVIMENTORow {
                 get {
                     return ((MOVIMENTORow)(this.GetParentRow(this.Table.ParentRelations["FK_VAGAS_REFERENCE_MOVIMENT"])));
@@ -2199,6 +2571,156 @@ namespace SISHOMEROGIL.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNOMENull() {
                 this[this.tableVAGAS.NOMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSENHAENTREGUENull() {
+                return this.IsNull(this.tableVAGAS.SENHAENTREGUEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSENHAENTREGUENull() {
+                this[this.tableVAGAS.SENHAENTREGUEColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ViewMovimentoDiaRow : global::System.Data.DataRow {
+            
+            private ViewMovimentoDiaDataTable tableViewMovimentoDia;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ViewMovimentoDiaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableViewMovimentoDia = ((ViewMovimentoDiaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DATA {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableViewMovimentoDia.DATAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATA\' in table \'ViewMovimentoDia\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableViewMovimentoDia.DATAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MEDICO {
+                get {
+                    return ((string)(this[this.tableViewMovimentoDia.MEDICOColumn]));
+                }
+                set {
+                    this[this.tableViewMovimentoDia.MEDICOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.TimeSpan HORARIO {
+                get {
+                    try {
+                        return ((global::System.TimeSpan)(this[this.tableViewMovimentoDia.HORARIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HORARIO\' in table \'ViewMovimentoDia\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableViewMovimentoDia.HORARIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PRONTUARIO {
+                get {
+                    try {
+                        return ((string)(this[this.tableViewMovimentoDia.PRONTUARIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRONTUARIO\' in table \'ViewMovimentoDia\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableViewMovimentoDia.PRONTUARIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PACIENTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableViewMovimentoDia.PACIENTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PACIENTE\' in table \'ViewMovimentoDia\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableViewMovimentoDia.PACIENTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDATANull() {
+                return this.IsNull(this.tableViewMovimentoDia.DATAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDATANull() {
+                this[this.tableViewMovimentoDia.DATAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHORARIONull() {
+                return this.IsNull(this.tableViewMovimentoDia.HORARIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHORARIONull() {
+                this[this.tableViewMovimentoDia.HORARIOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPRONTUARIONull() {
+                return this.IsNull(this.tableViewMovimentoDia.PRONTUARIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPRONTUARIONull() {
+                this[this.tableViewMovimentoDia.PRONTUARIOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPACIENTENull() {
+                return this.IsNull(this.tableViewMovimentoDia.PACIENTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPACIENTENull() {
+                this[this.tableViewMovimentoDia.PACIENTEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2324,6 +2846,40 @@ namespace SISHOMEROGIL.BancoDados {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VAGASRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ViewMovimentoDiaRowChangeEvent : global::System.EventArgs {
+            
+            private ViewMovimentoDiaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ViewMovimentoDiaRowChangeEvent(ViewMovimentoDiaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ViewMovimentoDiaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3331,23 +3887,46 @@ SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM MOVIMENTO WHERE (IDMOVIMENTO =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM dbo.MOVIMENTO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT     COUNT(MOVIMENTO.IDMOVIMENTO) AS Quantidade\r\nFROM         MOVIMENTO INN" +
-                "ER JOIN\r\n                      MEDICOS ON MOVIMENTO.IDMEDICO = MEDICOS.IDMEDICO\r" +
-                "\nWHERE     (MOVIMENTO.DATA >= @dataincio) AND (MOVIMENTO.DATA <= @datafim)";
+            this._commandCollection[1].CommandText = "UPDATE    MOVIMENTO\r\nSET              QTDVAGAS = @numvagas\r\nWHERE     (IDMOVIMENT" +
+                "O = @idMovimento)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataincio", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datafim", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numvagas", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "QTDVAGAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idMovimento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT     MAX(IDMOVIMENTO) AS ID\r\nFROM         MOVIMENTO";
+            this._commandCollection[2].CommandText = "SELECT     COUNT(IDMOVIMENTO) AS Quantidade\r\nFROM         MOVIMENTO\r\nWHERE     (D" +
+                "ATA = @data) AND (IDMEDICO = @idmedico)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmedico", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMEDICO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "DELETE FROM MOVIMENTO\r\nWHERE     (IDMOVIMENTO = @idmovimento)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmovimento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT     DATA\r\nFROM         MOVIMENTO\r\nWHERE     (IDMEDICO = @idmedico)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmedico", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMEDICO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT     IDMOVIMENTO\r\nFROM         MOVIMENTO\r\nWHERE     (IDMEDICO = @idmedico) " +
+                "AND (DATA = @data)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmedico", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMEDICO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT     MAX(IDMOVIMENTO) AS ID\r\nFROM         MOVIMENTO";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3369,6 +3948,23 @@ SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM MOVIMENTO WHERE (IDMOVIMENTO =
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual MovimentoDiario.MOVIMENTODataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            MovimentoDiario.MOVIMENTODataTable dataTable = new MovimentoDiario.MOVIMENTODataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MovimentoDiario.MOVIMENTODataTable RetornaDiasMovimento(global::System.Nullable<int> idmedico) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((idmedico.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idmedico.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             MovimentoDiario.MOVIMENTODataTable dataTable = new MovimentoDiario.MOVIMENTODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3564,19 +4160,49 @@ SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM MOVIMENTO WHERE (IDMOVIMENTO =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object ContaMovimento(string dataincio, string datafim) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int AtualizaNumVagas(global::System.Nullable<int> numvagas, int idMovimento) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((dataincio == null)) {
+            if ((numvagas.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(numvagas.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[1].Value = ((int)(idMovimento));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object ContaMovimento(string data, global::System.Nullable<int> idmedico) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((data == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((string)(dataincio));
+                command.Parameters[0].Value = ((string)(data));
             }
-            if ((datafim == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
+            if ((idmedico.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(idmedico.Value));
             }
             else {
-                command.Parameters[1].Value = ((string)(datafim));
+                command.Parameters[1].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3604,8 +4230,72 @@ SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM MOVIMENTO WHERE (IDMOVIMENTO =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeletaMovimentoNulo(int idmovimento) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(idmovimento));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> RetornaIDMovimento(global::System.Nullable<int> idmedico, string data) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            if ((idmedico.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(idmedico.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((data == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(data));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> RetornaUltimoID() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3756,10 +4446,11 @@ SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM MOVIMENTO WHERE (IDMOVIMENTO =
             tableMapping.ColumnMappings.Add("HORARIO", "HORARIO");
             tableMapping.ColumnMappings.Add("PRONTUARIO", "PRONTUARIO");
             tableMapping.ColumnMappings.Add("NOME", "NOME");
+            tableMapping.ColumnMappings.Add("SENHAENTREGUE", "SENHAENTREGUE");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[VAGAS] WHERE (([IDVAGA] = @Original_IDVAGA) AND ((@IsNull_IDMOVIMENTO = 1 AND [IDMOVIMENTO] IS NULL) OR ([IDMOVIMENTO] = @Original_IDMOVIMENTO)) AND ((@IsNull_HORARIO = 1 AND [HORARIO] IS NULL) OR ([HORARIO] = @Original_HORARIO)) AND ((@IsNull_PRONTUARIO = 1 AND [PRONTUARIO] IS NULL) OR ([PRONTUARIO] = @Original_PRONTUARIO)) AND ((@IsNull_NOME = 1 AND [NOME] IS NULL) OR ([NOME] = @Original_NOME)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[VAGAS] WHERE (([IDVAGA] = @Original_IDVAGA) AND ((@IsNull_IDMOVIMENTO = 1 AND [IDMOVIMENTO] IS NULL) OR ([IDMOVIMENTO] = @Original_IDMOVIMENTO)) AND ((@IsNull_HORARIO = 1 AND [HORARIO] IS NULL) OR ([HORARIO] = @Original_HORARIO)) AND ((@IsNull_PRONTUARIO = 1 AND [PRONTUARIO] IS NULL) OR ([PRONTUARIO] = @Original_PRONTUARIO)) AND ((@IsNull_NOME = 1 AND [NOME] IS NULL) OR ([NOME] = @Original_NOME)) AND ((@IsNull_SENHAENTREGUE = 1 AND [SENHAENTREGUE] IS NULL) OR ([SENHAENTREGUE] = @Original_SENHAENTREGUE)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDVAGA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDVAGA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDMOVIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -3770,25 +4461,28 @@ SELECT IDMOVIMENTO, IDMEDICO, DATA, QTDVAGAS FROM MOVIMENTO WHERE (IDMOVIMENTO =
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRONTUARIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NOME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SENHAENTREGUE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SENHAENTREGUE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SENHAENTREGUE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SENHAENTREGUE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[VAGAS] ([IDMOVIMENTO], [HORARIO], [PRONTUARIO], [NOME]) VALUES" +
-                " (@IDMOVIMENTO, @HORARIO, @PRONTUARIO, @NOME);\r\nSELECT IDVAGA, IDMOVIMENTO, HORA" +
-                "RIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[VAGAS] ([IDMOVIMENTO], [HORARIO], [PRONTUARIO], [NOME], [SENHAENTREGUE]) VALUES (@IDMOVIMENTO, @HORARIO, @PRONTUARIO, @NOME, @SENHAENTREGUE);
+SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME, SENHAENTREGUE FROM VAGAS WHERE (IDVAGA = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDMOVIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORARIO", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRONTUARIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SENHAENTREGUE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SENHAENTREGUE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[VAGAS] SET [IDMOVIMENTO] = @IDMOVIMENTO, [HORARIO] = @HORARIO, [PRONTUARIO] = @PRONTUARIO, [NOME] = @NOME WHERE (([IDVAGA] = @Original_IDVAGA) AND ((@IsNull_IDMOVIMENTO = 1 AND [IDMOVIMENTO] IS NULL) OR ([IDMOVIMENTO] = @Original_IDMOVIMENTO)) AND ((@IsNull_HORARIO = 1 AND [HORARIO] IS NULL) OR ([HORARIO] = @Original_HORARIO)) AND ((@IsNull_PRONTUARIO = 1 AND [PRONTUARIO] IS NULL) OR ([PRONTUARIO] = @Original_PRONTUARIO)) AND ((@IsNull_NOME = 1 AND [NOME] IS NULL) OR ([NOME] = @Original_NOME)));
-SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA = @IDVAGA)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[VAGAS] SET [IDMOVIMENTO] = @IDMOVIMENTO, [HORARIO] = @HORARIO, [PRONTUARIO] = @PRONTUARIO, [NOME] = @NOME, [SENHAENTREGUE] = @SENHAENTREGUE WHERE (([IDVAGA] = @Original_IDVAGA) AND ((@IsNull_IDMOVIMENTO = 1 AND [IDMOVIMENTO] IS NULL) OR ([IDMOVIMENTO] = @Original_IDMOVIMENTO)) AND ((@IsNull_HORARIO = 1 AND [HORARIO] IS NULL) OR ([HORARIO] = @Original_HORARIO)) AND ((@IsNull_PRONTUARIO = 1 AND [PRONTUARIO] IS NULL) OR ([PRONTUARIO] = @Original_PRONTUARIO)) AND ((@IsNull_NOME = 1 AND [NOME] IS NULL) OR ([NOME] = @Original_NOME)) AND ((@IsNull_SENHAENTREGUE = 1 AND [SENHAENTREGUE] IS NULL) OR ([SENHAENTREGUE] = @Original_SENHAENTREGUE)));
+SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME, SENHAENTREGUE FROM VAGAS WHERE (IDVAGA = @IDVAGA)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDMOVIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORARIO", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRONTUARIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SENHAENTREGUE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SENHAENTREGUE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDVAGA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDVAGA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDMOVIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDMOVIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3798,6 +4492,8 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRONTUARIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NOME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SENHAENTREGUE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SENHAENTREGUE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SENHAENTREGUE", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SENHAENTREGUE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDVAGA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDVAGA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3811,11 +4507,32 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM dbo.VAGAS";
+            this._commandCollection[0].CommandText = "SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME, SENHAENTREGUE FROM dbo.VAG" +
+                "AS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT     COUNT(IDVAGA) AS Quantidade\r\nFROM         VAGAS\r\nWHERE     (IDMOVIMENT" +
+                "O = @idmovimento)\r\n";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmovimento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "UPDATE    VAGAS\r\nSET              PRONTUARIO = @pront, NOME = @nome\r\nWHERE     (I" +
+                "DVAGA = @idvaga)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pront", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idvaga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDVAGA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT     IDVAGA, HORARIO, PRONTUARIO, NOME\r\nFROM         VAGAS\r\nWHERE     (IDMO" +
+                "VIMENTO = @idmovimento)\r\nORDER BY HORARIO";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmovimento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3837,6 +4554,23 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual MovimentoDiario.VAGASDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            MovimentoDiario.VAGASDataTable dataTable = new MovimentoDiario.VAGASDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MovimentoDiario.VAGASDataTable RetornaHorarios(global::System.Nullable<int> idmovimento) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((idmovimento.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idmovimento.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             MovimentoDiario.VAGASDataTable dataTable = new MovimentoDiario.VAGASDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -3875,7 +4609,7 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IDVAGA, global::System.Nullable<int> Original_IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> Original_HORARIO, string Original_PRONTUARIO, string Original_NOME) {
+        public virtual int Delete(int Original_IDVAGA, global::System.Nullable<int> Original_IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> Original_HORARIO, string Original_PRONTUARIO, string Original_NOME, global::System.Nullable<byte> Original_SENHAENTREGUE) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDVAGA));
             if ((Original_IDMOVIMENTO.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -3909,6 +4643,14 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_NOME));
             }
+            if ((Original_SENHAENTREGUE.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((byte)(Original_SENHAENTREGUE.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3929,7 +4671,7 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> HORARIO, string PRONTUARIO, string NOME) {
+        public virtual int Insert(global::System.Nullable<int> IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> HORARIO, string PRONTUARIO, string NOME, global::System.Nullable<byte> SENHAENTREGUE) {
             if ((IDMOVIMENTO.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IDMOVIMENTO.Value));
             }
@@ -3954,6 +4696,12 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(NOME));
             }
+            if ((SENHAENTREGUE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((byte)(SENHAENTREGUE.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3974,7 +4722,7 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> HORARIO, string PRONTUARIO, string NOME, int Original_IDVAGA, global::System.Nullable<int> Original_IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> Original_HORARIO, string Original_PRONTUARIO, string Original_NOME, int IDVAGA) {
+        public virtual int Update(global::System.Nullable<int> IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> HORARIO, string PRONTUARIO, string NOME, global::System.Nullable<byte> SENHAENTREGUE, int Original_IDVAGA, global::System.Nullable<int> Original_IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> Original_HORARIO, string Original_PRONTUARIO, string Original_NOME, global::System.Nullable<byte> Original_SENHAENTREGUE, int IDVAGA) {
             if ((IDMOVIMENTO.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IDMOVIMENTO.Value));
             }
@@ -3999,40 +4747,54 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(NOME));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_IDVAGA));
-            if ((Original_IDMOVIMENTO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_IDMOVIMENTO.Value));
+            if ((SENHAENTREGUE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(SENHAENTREGUE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IDVAGA));
+            if ((Original_IDMOVIMENTO.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_IDMOVIMENTO.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             if ((Original_HORARIO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.TimeSpan)(Original_HORARIO.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.TimeSpan)(Original_HORARIO.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Original_PRONTUARIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_PRONTUARIO));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_PRONTUARIO));
             }
             if ((Original_NOME == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_NOME));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_NOME));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(IDVAGA));
+            if ((Original_SENHAENTREGUE.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((byte)(Original_SENHAENTREGUE.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(IDVAGA));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4053,8 +4815,247 @@ SELECT IDVAGA, IDMOVIMENTO, HORARIO, PRONTUARIO, NOME FROM VAGAS WHERE (IDVAGA =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> HORARIO, string PRONTUARIO, string NOME, int Original_IDVAGA, global::System.Nullable<int> Original_IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> Original_HORARIO, string Original_PRONTUARIO, string Original_NOME) {
-            return this.Update(IDMOVIMENTO, HORARIO, PRONTUARIO, NOME, Original_IDVAGA, Original_IDMOVIMENTO, Original_HORARIO, Original_PRONTUARIO, Original_NOME, Original_IDVAGA);
+        public virtual int Update(global::System.Nullable<int> IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> HORARIO, string PRONTUARIO, string NOME, global::System.Nullable<byte> SENHAENTREGUE, int Original_IDVAGA, global::System.Nullable<int> Original_IDMOVIMENTO, global::System.Nullable<global::System.TimeSpan> Original_HORARIO, string Original_PRONTUARIO, string Original_NOME, global::System.Nullable<byte> Original_SENHAENTREGUE) {
+            return this.Update(IDMOVIMENTO, HORARIO, PRONTUARIO, NOME, SENHAENTREGUE, Original_IDVAGA, Original_IDMOVIMENTO, Original_HORARIO, Original_PRONTUARIO, Original_NOME, Original_SENHAENTREGUE, Original_IDVAGA);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> ContaVagas(global::System.Nullable<int> idmovimento) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((idmovimento.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(idmovimento.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int InsereMovimentoVaga(string pront, string nome, int idvaga) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((pront == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(pront));
+            }
+            if ((nome == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(nome));
+            }
+            command.Parameters[2].Value = ((int)(idvaga));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class ViewMovimentoDiaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public ViewMovimentoDiaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "ViewMovimentoDia";
+            tableMapping.ColumnMappings.Add("DATA", "DATA");
+            tableMapping.ColumnMappings.Add("MEDICO", "MEDICO");
+            tableMapping.ColumnMappings.Add("HORARIO", "HORARIO");
+            tableMapping.ColumnMappings.Add("PRONTUARIO", "PRONTUARIO");
+            tableMapping.ColumnMappings.Add("PACIENTE", "PACIENTE");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SISHOMEROGIL.Properties.Settings.Default.UBSHOMEROGILConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT     MOVIMENTO.DATA, MEDICOS.NOME AS MEDICO, VAGAS.HORARIO, VAGAS.PRONTUARIO, VAGAS.NOME AS PACIENTE
+FROM         VAGAS INNER JOIN
+                      MOVIMENTO ON VAGAS.IDMOVIMENTO = MOVIMENTO.IDMOVIMENTO INNER JOIN
+                      MEDICOS ON MOVIMENTO.IDMEDICO = MEDICOS.IDMEDICO
+WHERE     (VAGAS.IDMOVIMENTO = @idmovimento)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idmovimento", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDMOVIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual MovimentoDiario.ViewMovimentoDiaDataTable RetornaMovimentoDia(global::System.Nullable<int> idmovimento) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idmovimento.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idmovimento.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            MovimentoDiario.ViewMovimentoDiaDataTable dataTable = new MovimentoDiario.ViewMovimentoDiaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
