@@ -15,19 +15,42 @@ namespace SISHOMEROGIL.Recepcao
     public partial class frmMovimentoDiario : frmModelo
     {
         int idMovimento = 0;
+        // pesquisar na memoria
+        DataTable tabela;
 
         public frmMovimentoDiario()
         {
-            InitializeComponent();
+            try
+            {
+                PacienteFirebird firebird = new PacienteFirebird();
+                InitializeComponent();
+                tabela = firebird.RetornaTabelaUsuariosCadastrados();
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+            
         }
 
         private void frmMovimentoDiario_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'movimentoDiario.MEDICOS' table. You can move, or remove it, as needed.
-            this.mEDICOSTableAdapter.Fill(this.movimentoDiario.MEDICOS);
-            txMedico.SelectedItem = null;
-            txDia.Items.Clear();
-            txDia.SelectedItem = null;
+
+            try
+            {
+                // TODO: This line of code loads data into the 'movimentoDiario.MEDICOS' table. You can move, or remove it, as needed.
+                this.mEDICOSTableAdapter.Fill(this.movimentoDiario.MEDICOS);
+                txMedico.SelectedItem = null;
+                txDia.Items.Clear();
+                txDia.SelectedItem = null;
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+            
         }
         
         private void txMedico_TextChanged(object sender, EventArgs e)
@@ -99,13 +122,17 @@ namespace SISHOMEROGIL.Recepcao
             txDia.ResetText();
             btnLimpar.Enabled = false;
             DtgDadosConsultas.DataSource = null;
+            txIdvaga.Clear();
+            txProntuario.Clear();
+            txNome.Clear();
+            txHora.Clear();
         }
 
         private void txProntuario_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
-                PacienteFirebird firebird = new PacienteFirebird();
+                
 
                 if (e.KeyCode == Keys.Enter)
                 {
@@ -117,7 +144,6 @@ namespace SISHOMEROGIL.Recepcao
                     else
                     {
                         
-                        DataTable tabela = firebird.RetornaNomeUsuarioCadastrado(txProntuario.Text.PadLeft(7, '0'));
                         DataRow Linha;
                         string _prontuario = txProntuario.Text.PadLeft(7, '0');
                         txProntuario.Text = _prontuario;
@@ -168,7 +194,7 @@ namespace SISHOMEROGIL.Recepcao
             {
                 VAGASTableAdapter vagas = new VAGASTableAdapter();
 
-                if (!txProntuario.Text.Equals("") || !txNome.Text.Equals(""))
+                if (!txProntuario.Text.Equals("") && !txNome.Text.Equals(""))
                 {
                     vagas.InsereMovimentoVaga(txProntuario.Text, txNome.Text, int.Parse(txIdvaga.Text));
                 }
@@ -205,6 +231,7 @@ namespace SISHOMEROGIL.Recepcao
         {
             try
             {
+                txProntuario.ReadOnly = false;
                 VAGASTableAdapter vagas = new VAGASTableAdapter();
                 DataTable tbHora = vagas.RetornaHorarios(idMovimento);
                 foreach (DataRow linh in tbHora.Rows)
@@ -224,11 +251,28 @@ namespace SISHOMEROGIL.Recepcao
                 if (txIdvaga.Text.Equals(""))
                 {
                     MessageBox.Show("Não há mais vagas para a data e o médico selecionado!");
-                    PainelMovimento.Enabled = false;
+                    txProntuario.ReadOnly = true;
                 }
 
-                ViewMovimentoDiaTableAdapter view = new ViewMovimentoDiaTableAdapter();
+                MOVIMENTOTableAdapter view = new MOVIMENTOTableAdapter();
                 DtgDadosConsultas.DataSource= view.RetornaMovimentoDia(idMovimento);
+                DtgDadosConsultas.Columns[0].Visible = false;
+                DtgDadosConsultas.Columns[1].Visible = false;
+                DtgDadosConsultas.Columns[2].Visible = false;
+                DtgDadosConsultas.Columns[3].Visible = false;
+                DtgDadosConsultas.Columns[4].Visible = false;
+                DtgDadosConsultas.Columns[5].Visible = false;
+                DtgDadosConsultas.Columns[9].Visible = false;
+
+                int indice = 1;
+                foreach (DataGridViewRow linha in DtgDadosConsultas.Rows)
+                {
+                    if (linha.IsNewRow) continue;
+                    linha.HeaderCell.Value = indice.ToString();
+                    indice++;
+                }
+
+                DtgDadosConsultas.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
             }
             catch (Exception err)
             {
@@ -244,7 +288,12 @@ namespace SISHOMEROGIL.Recepcao
                 DialogResult resultado = MessageBox.Show("Excluir registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
                 if (resultado == System.Windows.Forms.DialogResult.Yes)
                 {
-                    /var nome = DtgDadosConsultas.CurrentRow.Cells[4].ToString();
+                    var nome = DtgDadosConsultas.CurrentRow.Cells[2].Value.ToString();
+                    var pront = DtgDadosConsultas.CurrentRow.Cells[1].Value.ToString();
+                    VAGASTableAdapter vag = new VAGASTableAdapter();
+                    int idvaga = (int)vag.RetornaIdVaga(idMovimento, pront, nome);
+                    vag.RemoveVaga(null,null,idvaga);
+                    CarregaHoraConsulta(); 
                 }
             }
             catch (Exception err)

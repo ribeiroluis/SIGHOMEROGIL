@@ -32,6 +32,7 @@ namespace SISHOMEROGIL.Recepcao.Controles
 
             }
         }
+        
         public DataTable RetornaNomeUsuarioCadastrado(string prontuario)
         {
             FbConnection conex = new FbConnection(conexao);
@@ -40,6 +41,32 @@ namespace SISHOMEROGIL.Recepcao.Controles
             FbCommand comando = new FbCommand(query, conex);
             try
             {
+                conex.Open();
+                FbDataAdapter datareader = new FbDataAdapter(comando);
+                DataTable usuarios = new DataTable();
+                datareader.Fill(usuarios);
+                return usuarios;
+            }
+            catch (Exception err)
+            {
+
+                throw err;
+            }
+            finally
+            {
+                conex.Close();
+            }
+        }
+        
+        public DataTable RetornaTabelaUsuariosCadastrados()
+        {
+            FbConnection conex = new FbConnection(conexao);
+
+            string query = "SELECT CDUSUARIO, DSUSUARIO, DSMAE, DTNASCIMENTO FROM TBUSUARIO";
+            FbCommand comando = new FbCommand(query, conex);
+            try
+            {
+
                 conex.Open();
                 FbDataAdapter datareader = new FbDataAdapter(comando);
                 DataTable usuarios = new DataTable();

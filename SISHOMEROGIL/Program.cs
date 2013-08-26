@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using SISHOMEROGIL.Administrador;
 using SISHOMEROGIL.Recepcao;
 using SISHOMEROGIL.Acolhimento;
+using SISHOMEROGIL.Especialidades.Interface;
 
 namespace SISHOMEROGIL
 {
@@ -19,7 +20,8 @@ namespace SISHOMEROGIL
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
             //Application.Run(new frmTelaSplash());
-            Application.Run(new frmMovimentoDiario());
+            Application.Run(new frmAutoCusto());
+            //Application.Run(new frmEscolheDia());
         }
     }
 }

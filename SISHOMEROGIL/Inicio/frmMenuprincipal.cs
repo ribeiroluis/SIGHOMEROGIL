@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using SISHOMEROGIL.Administrador;
 using SISHOMEROGIL.Recepcao;
+using SISHOMEROGIL.Acolhimento;
 
 
 namespace SISHOMEROGIL
@@ -156,6 +157,31 @@ namespace SISHOMEROGIL
         {
             frmSenhas senha = new frmSenhas();
             senha.Show();
+        }
+
+        private void digitarMovimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMovimentoDiario mov = new frmMovimentoDiario();
+            mov.ShowDialog();
+
+        }
+
+        private void atenderMovimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAtendimentoMovimento mov = new frmAtendimentoMovimento();
+            mov.Show();
+        }
+
+        private void inserirVagasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInserirVagas ins = new frmInserirVagas();
+            ins.ShowDialog();
+        }
+
+        private void imprimirMovimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEscolheDia escolhe = new frmEscolheDia();
+            escolhe.ShowDialog();
         }
     }
 }

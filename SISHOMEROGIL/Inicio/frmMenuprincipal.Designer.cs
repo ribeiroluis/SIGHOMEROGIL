@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbToolStrip = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SubMenuArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SubMenuAcolhimento = new System.Windows.Forms.ToolStripMenuItem();
+            this.inserirVagasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SubMenuConsultaEspecializada = new System.Windows.Forms.ToolStripMenuItem();
             this.examesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,14 +49,22 @@
             this.RelatorioEstoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SubMenuGerencia = new System.Windows.Forms.ToolStripMenuItem();
             this.SubMenuRecepcao = new System.Windows.Forms.ToolStripMenuItem();
+            this.senhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.digitarMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atenderMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.senhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // statusStrip1
             // 
@@ -74,11 +83,6 @@
             this.lbToolStrip.Name = "lbToolStrip";
             this.lbToolStrip.Size = new System.Drawing.Size(72, 17);
             this.lbToolStrip.Text = "lbToolStrip";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // menuStrip1
             // 
@@ -131,11 +135,20 @@
             // 
             // SubMenuAcolhimento
             // 
+            this.SubMenuAcolhimento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inserirVagasToolStripMenuItem});
             this.SubMenuAcolhimento.Enabled = false;
             this.SubMenuAcolhimento.Name = "SubMenuAcolhimento";
             this.SubMenuAcolhimento.Size = new System.Drawing.Size(92, 21);
             this.SubMenuAcolhimento.Text = "Acolhimento";
             this.SubMenuAcolhimento.Click += new System.EventHandler(this.SubMenuAcolhimento_Click);
+            // 
+            // inserirVagasToolStripMenuItem
+            // 
+            this.inserirVagasToolStripMenuItem.Name = "inserirVagasToolStripMenuItem";
+            this.inserirVagasToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.inserirVagasToolStripMenuItem.Text = "Inserir Vagas";
+            this.inserirVagasToolStripMenuItem.Click += new System.EventHandler(this.inserirVagasToolStripMenuItem_Click);
             // 
             // SubMenuConsultaEspecializada
             // 
@@ -209,12 +222,36 @@
             // SubMenuRecepcao
             // 
             this.SubMenuRecepcao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.senhasToolStripMenuItem});
+            this.senhasToolStripMenuItem,
+            this.digitarMovimentoToolStripMenuItem,
+            this.atenderMovimentoToolStripMenuItem,
+            this.imprimirMovimentoToolStripMenuItem});
             this.SubMenuRecepcao.Enabled = false;
             this.SubMenuRecepcao.Name = "SubMenuRecepcao";
             this.SubMenuRecepcao.Size = new System.Drawing.Size(77, 21);
             this.SubMenuRecepcao.Text = "Recepção";
             this.SubMenuRecepcao.Click += new System.EventHandler(this.SubMenuRecepcao_Click);
+            // 
+            // senhasToolStripMenuItem
+            // 
+            this.senhasToolStripMenuItem.Name = "senhasToolStripMenuItem";
+            this.senhasToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.senhasToolStripMenuItem.Text = "Senhas";
+            this.senhasToolStripMenuItem.Click += new System.EventHandler(this.senhasToolStripMenuItem_Click);
+            // 
+            // digitarMovimentoToolStripMenuItem
+            // 
+            this.digitarMovimentoToolStripMenuItem.Name = "digitarMovimentoToolStripMenuItem";
+            this.digitarMovimentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.digitarMovimentoToolStripMenuItem.Text = "Digitar Movimento";
+            this.digitarMovimentoToolStripMenuItem.Click += new System.EventHandler(this.digitarMovimentoToolStripMenuItem_Click);
+            // 
+            // atenderMovimentoToolStripMenuItem
+            // 
+            this.atenderMovimentoToolStripMenuItem.Name = "atenderMovimentoToolStripMenuItem";
+            this.atenderMovimentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.atenderMovimentoToolStripMenuItem.Text = "Atender Movimento";
+            this.atenderMovimentoToolStripMenuItem.Click += new System.EventHandler(this.atenderMovimentoToolStripMenuItem_Click);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -245,12 +282,12 @@
             this.gerenciarUsuáriosToolStripMenuItem.Text = "Gerenciar Usuários";
             this.gerenciarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.gerenciarUsuáriosToolStripMenuItem_Click);
             // 
-            // senhasToolStripMenuItem
+            // imprimirMovimentoToolStripMenuItem
             // 
-            this.senhasToolStripMenuItem.Name = "senhasToolStripMenuItem";
-            this.senhasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.senhasToolStripMenuItem.Text = "Senhas";
-            this.senhasToolStripMenuItem.Click += new System.EventHandler(this.senhasToolStripMenuItem_Click);
+            this.imprimirMovimentoToolStripMenuItem.Name = "imprimirMovimentoToolStripMenuItem";
+            this.imprimirMovimentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.imprimirMovimentoToolStripMenuItem.Text = "Imprimir Movimento";
+            this.imprimirMovimentoToolStripMenuItem.Click += new System.EventHandler(this.imprimirMovimentoToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -299,5 +336,9 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerenciarUsuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem senhasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem digitarMovimentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atenderMovimentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inserirVagasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imprimirMovimentoToolStripMenuItem;
     }
 }

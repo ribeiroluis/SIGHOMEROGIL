@@ -69,10 +69,16 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.7.7.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DataSetFireBird\FirebirdSql.Data.FirebirdClient.dll</HintPath>
@@ -94,18 +100,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Especialidades\Controles\Pessoa.cs" />
-    <Compile Include="Especialidades\Interface\frmAutoCusto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Especialidades\Interface\frmAutoCusto.Designer.cs">
-      <DependentUpon>frmAutoCusto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MovimentoDia1.cs">
+    <Compile Include="MovimentoDia.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MovimentoDia1.rpt</DependentUpon>
-      <SubType>Component</SubType>
+      <DependentUpon>MovimentoDia.rpt</DependentUpon>
     </Compile>
     <Compile Include="Recepcao\Controles\PacienteFirebird.cs" />
     <Compile Include="Acolhimento\frmInserirVagas.cs">
@@ -252,9 +250,6 @@
     <EmbeddedResource Include="Administrador\frmGerenciaUsuarios.resx">
       <DependentUpon>frmGerenciaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Especialidades\Interface\frmAutoCusto.resx">
-      <DependentUpon>frmAutoCusto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Farmacia\frmBuscaCEP.resx">
       <DependentUpon>frmBuscaCEP.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,9 +283,9 @@
     <EmbeddedResource Include="Inicio\frmTelaSplash.resx">
       <DependentUpon>frmTelaSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovimentoDia1.rpt">
+    <EmbeddedResource Include="MovimentoDia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>MovimentoDia1.cs</LastGenOutput>
+      <LastGenOutput>MovimentoDia.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

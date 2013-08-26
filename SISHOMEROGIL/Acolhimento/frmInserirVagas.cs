@@ -226,7 +226,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else if (i > 21 && i < 28)
                                                 hora = TimeSpan.Parse("10:00");
                                             else
-                                                hora = TimeSpan.Parse("11:00");
+                                                hora = TimeSpan.Parse("10:30");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }} break;
@@ -246,7 +246,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else if (i > 21 && i < 28)
                                                 hora = TimeSpan.Parse("10:00");
                                             else
-                                                hora = TimeSpan.Parse("11:00");
+                                                hora = TimeSpan.Parse("10:30");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }
@@ -267,7 +267,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else if (i > 21 && i < 28)
                                                 hora = TimeSpan.Parse("10:00");
                                             else
-                                                hora = TimeSpan.Parse("11:00");
+                                                hora = TimeSpan.Parse("10:30");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }
@@ -288,7 +288,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else if (i > 21 && i < 28)
                                                 hora = TimeSpan.Parse("10:00");
                                             else
-                                                hora = TimeSpan.Parse("11:00");
+                                                hora = TimeSpan.Parse("10:30");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }
