@@ -94,6 +94,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Especialidades\BD\AcessoDadosEspecialidades.cs" />
+    <Compile Include="Especialidades\BD\EspecialidadesAutoCusto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EspecialidadesAutoCusto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Especialidades\Controles\Pessoa.cs" />
     <Compile Include="Especialidades\Interface\frmAutoCusto.cs">
       <SubType>Form</SubType>
@@ -334,6 +340,17 @@
     <None Include="BancoDados\MovimentoDiario.xss">
       <DependentUpon>MovimentoDiario.xsd</DependentUpon>
     </None>
+    <None Include="Especialidades\BD\EspecialidadesAutoCusto.xsc">
+      <DependentUpon>EspecialidadesAutoCusto.xsd</DependentUpon>
+    </None>
+    <None Include="Especialidades\BD\EspecialidadesAutoCusto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EspecialidadesAutoCusto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Especialidades\BD\EspecialidadesAutoCusto.xss">
+      <DependentUpon>EspecialidadesAutoCusto.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -420,6 +437,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Acolhimento\Controles\" />
+    <Folder Include="PACS\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

@@ -38,7 +38,44 @@ namespace SISHOMEROGIL.Especialidades.Interface
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            txCep.ReadOnly = true;
+            txCep.Clear();
 
+            txComplemento.ReadOnly = true;
+            txComplemento.Clear();
+
+            txCPF.ReadOnly = true;
+            txCPF.Clear();
+
+            txNome.ReadOnly = true;
+            txNome.Clear();
+
+            txNomeMae.ReadOnly = true;
+            txNomeMae.Clear();
+
+            txNumero.ReadOnly = true;
+            txNumero.Clear();
+
+            txProntuario.ReadOnly = true;
+            txProntuario.Clear();
+
+            txTelCelular.ReadOnly = true;
+            txTelCelular.Clear();
+
+            txTelFixo.ReadOnly = true;
+            txTelFixo.Clear();
+
+            DataNascimento.Enabled = false;
+            DataNascimento.Value = Convert.ToDateTime("01/01/1970");
+
+            txIDUsuario.Clear();
+            TxLogradouro.Clear();
+            txBairro.Clear();
+            txCartaoSus.Clear();
+            txCartaoSus.ReadOnly = false;
+            this.ActiveControl = txCartaoSus;
+            
+            
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -63,11 +100,26 @@ namespace SISHOMEROGIL.Especialidades.Interface
                 if (e.KeyCode == Keys.Enter)
                 {
                     Usuario = new Pessoa();
-                    if (Usuario.ConsultaCNS(txCartaoSus.Text))
+                    Usuario.CNS = txCartaoSus.Text;
+
+                    if (Usuario.ValidaCNS())
                     {
-                        MessageBox.Show("Válido");
-                        txCPF.Enabled = true;
-                        this.ActiveControl = txCPF;
+                        
+                        if (Usuario.PesquisaUsuarioPorCartaoSUS())
+                        {
+                            PreencheCampos();
+                            btnConfirmar.Text = "Confirmar";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário não localizado, cadastre novo");
+                            txCartaoSus.ReadOnly = true;
+                            LiberaCampos();
+                            btnConfirmar.Text = "Incluir";
+                            btnConfirmar.Enabled = true;
+                            btnLimpar.Enabled = true;
+                            this.ActiveControl = txProntuario;
+                        }
                     }
                     else
                         MessageBox.Show("Cartão SUS inválido, verifique");
@@ -75,11 +127,66 @@ namespace SISHOMEROGIL.Especialidades.Interface
             }
             catch (Exception err )
             {
-
                 MessageBox.Show(err.Message);
             }
-        }      
-        
-        
+        }
+
+        private void PreencheCampos()
+        {
+            txBairro.Text = Usuario.Bairro;
+            txCep.Text = Usuario.CEP;
+            txCartaoSus.Text = Usuario.CNS;
+            txComplemento.Text = Usuario.Complemento;
+            txCPF.Text = Usuario.CPF;
+            txIDUsuario.Text = Usuario.IDUsuario;
+            txNome.Text = Usuario.Nome;
+            txNomeMae.Text = Usuario.Mae;
+            txProntuario.Text = Usuario.Prontuario;
+            txTelCelular.Text = Usuario.TelefoneCelular;
+            txTelFixo.Text = Usuario.TelefoneFixo;
+            DataNascimento.Text = Usuario.DataNascimento;
+            TxLogradouro.Text = Usuario.Logradouro;
+            txNumero.Text = Usuario.Numero;
+            txBairro.Text = Usuario.Bairro;
+            btnConfirmar.Enabled = true;
+            btnEditar.Enabled = true;
+            btnLimpar.Enabled = true;
+            txCartaoSus.ReadOnly = true;
+
+        }
+
+        private void LiberaCampos()
+        {
+            txCep.ReadOnly = false;
+            txComplemento.ReadOnly = false;
+            txCPF.ReadOnly = false;
+            txNome.ReadOnly = false;
+            txNomeMae.ReadOnly = false;
+            txNumero.ReadOnly = false;
+            txProntuario.ReadOnly = false;
+            txTelCelular.ReadOnly = false;
+            txTelFixo.ReadOnly = false;
+            DataNascimento.Enabled = true;
+        }
+
+        private void txProntuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    Usuario.Prontuario = txProntuario.Text.PadLeft(7, '0');
+                    txProntuario.Text = Usuario.Prontuario;
+                    if (Usuario.PesquisaUsuarioPorProntuarioFireBird())
+                    {
+                        PreencheCampos();
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
     }
 }

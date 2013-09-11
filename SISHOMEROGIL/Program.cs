@@ -19,8 +19,8 @@ namespace SISHOMEROGIL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);            
-            //Application.Run(new frmTelaSplash());
-            Application.Run(new frmAutoCusto());
+            Application.Run(new frmTelaSplash());
+            //Application.Run(new frmMovimentoDiario());
             //Application.Run(new frmEscolheDia());
         }
     }

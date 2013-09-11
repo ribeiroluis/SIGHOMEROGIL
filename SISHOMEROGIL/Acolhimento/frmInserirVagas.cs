@@ -306,10 +306,25 @@ namespace SISHOMEROGIL.Acolhimento
                         {
                             switch (data.DayOfWeek.ToString())
                             {
+                                #region Terça
+                                case "Tuesday":
+                                    {
+                                        for (int i = 1; i <= 12; i++)
+                                        {
+                                            if (i < 7)
+                                                hora = TimeSpan.Parse("07:30");
+                                            else if (i > 6 && i < 13)
+                                                hora = TimeSpan.Parse("08:30");
+
+                                            vagas.Insert(idMovimento, hora, null, null, null);
+                                        }
+                                    } break;
+                                #endregion
+                                    
                                 #region Quarta
                                 case "Wednesday":
                                     {
-                                        for (int i = 1; i <= 30; i++)
+                                        for (int i = 1; i <= 26; i++)
                                         {
                                             if (i < 7)
                                                 hora = TimeSpan.Parse("14:00");
@@ -318,7 +333,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else if (i > 12 && i < 21)
                                                 hora = TimeSpan.Parse("16:00");                                            
                                             else
-                                                hora = TimeSpan.Parse("16:30");
+                                                hora = TimeSpan.Parse("17:00");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }
@@ -328,7 +343,7 @@ namespace SISHOMEROGIL.Acolhimento
                                 #region Quinta
                                 case "Thursday":
                                     {
-                                        for (int i = 1; i <= 30; i++)
+                                        for (int i = 1; i <= 26; i++)
                                         {
                                             if (i < 7)
                                                 hora = TimeSpan.Parse("07:00");
@@ -336,10 +351,8 @@ namespace SISHOMEROGIL.Acolhimento
                                                 hora = TimeSpan.Parse("08:00");
                                             else if (i > 12 && i < 21)
                                                 hora = TimeSpan.Parse("09:00");
-                                            else if (i > 20 && i < 26)
-                                                hora = TimeSpan.Parse("10:00");
                                             else
-                                                hora = TimeSpan.Parse("10:30");
+                                                hora = TimeSpan.Parse("10:00");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }
@@ -349,7 +362,7 @@ namespace SISHOMEROGIL.Acolhimento
                                 #region Sexta
                                 case "Friday":
                                     {
-                                        for (int i = 1; i <= 30; i++)
+                                        for (int i = 1; i <= 26; i++)
                                         {
                                             if (i < 7)
                                                 hora = TimeSpan.Parse("14:00");
@@ -358,7 +371,7 @@ namespace SISHOMEROGIL.Acolhimento
                                             else if (i > 12 && i < 21)
                                                 hora = TimeSpan.Parse("16:00");
                                             else
-                                                hora = TimeSpan.Parse("16:30");
+                                                hora = TimeSpan.Parse("17:00");
 
                                             vagas.Insert(idMovimento, hora, null, null, null);
                                         }
@@ -380,7 +393,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("14:00");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("15:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("15:30");                                            
@@ -399,7 +412,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("10:00");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("11:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("11:30");
@@ -412,7 +425,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("12:30");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("13:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("13:30");
@@ -431,7 +444,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("14:30");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("15:30");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("16:00");
@@ -461,7 +474,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("07:00");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("08:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("09:00");                                            
@@ -480,7 +493,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("07:00");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("08:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("09:00");                                            
@@ -499,7 +512,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("07:00");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("08:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("09:00");                                            
@@ -518,7 +531,7 @@ namespace SISHOMEROGIL.Acolhimento
                                         {
                                             if (i < 4)
                                                 hora = TimeSpan.Parse("07:00");
-                                            else if (i > 4 && i < 9)
+                                            else if (i > 3 && i < 9)
                                                 hora = TimeSpan.Parse("08:00");
                                             else if (i > 8 && i < 13)
                                                 hora = TimeSpan.Parse("09:00");                                            

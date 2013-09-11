@@ -52,11 +52,11 @@
             this.senhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.digitarMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atenderMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirMovimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -253,6 +253,13 @@
             this.atenderMovimentoToolStripMenuItem.Text = "Atender Movimento";
             this.atenderMovimentoToolStripMenuItem.Click += new System.EventHandler(this.atenderMovimentoToolStripMenuItem_Click);
             // 
+            // imprimirMovimentoToolStripMenuItem
+            // 
+            this.imprimirMovimentoToolStripMenuItem.Name = "imprimirMovimentoToolStripMenuItem";
+            this.imprimirMovimentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.imprimirMovimentoToolStripMenuItem.Text = "Imprimir Movimento";
+            this.imprimirMovimentoToolStripMenuItem.Click += new System.EventHandler(this.imprimirMovimentoToolStripMenuItem_Click);
+            // 
             // ajudaToolStripMenuItem
             // 
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
@@ -282,13 +289,6 @@
             this.gerenciarUsuáriosToolStripMenuItem.Text = "Gerenciar Usuários";
             this.gerenciarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.gerenciarUsuáriosToolStripMenuItem_Click);
             // 
-            // imprimirMovimentoToolStripMenuItem
-            // 
-            this.imprimirMovimentoToolStripMenuItem.Name = "imprimirMovimentoToolStripMenuItem";
-            this.imprimirMovimentoToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.imprimirMovimentoToolStripMenuItem.Text = "Imprimir Movimento";
-            this.imprimirMovimentoToolStripMenuItem.Click += new System.EventHandler(this.imprimirMovimentoToolStripMenuItem_Click);
-            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -296,10 +296,12 @@
             this.ClientSize = new System.Drawing.Size(792, 566);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmMenuPrincipal";
             this.Text = "MENU PRINCIPAL";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

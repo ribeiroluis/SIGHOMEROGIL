@@ -150,6 +150,7 @@ namespace SISHOMEROGIL
         private void gerenciarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmGerenciaUsuarios frm = new frmGerenciaUsuarios();
+            this.Parent = frm.Parent;
             frm.ShowDialog();
         }
 

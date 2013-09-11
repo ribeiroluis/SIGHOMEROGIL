@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using SISHOMEROGIL.Especialidades.BD;
+using System.Windows.Forms;
 
 namespace SISHOMEROGIL.Especialidades.Controles
 {
     class Pessoa
     {
         public string Prontuario { get; set; }
+        public string IDUsuario { get; set; }
         public string Nome { get; set; }
         public string  DataNascimento { get; set; }
         public string CPF { get; set; }
@@ -15,12 +19,12 @@ namespace SISHOMEROGIL.Especialidades.Controles
         public string Mae { get; set; }
         public string CEP { get; set; }
         public string Logradouro { get; set; }
-        public int Numero { get; set; }
+        public string Numero { get; set; }
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public string TelefoneFixo { get; set; }
         public string TelefoneCelular { get; set; }
-
+        AcessoDadosEspecialidades Dados;
 
 
         public Pessoa()
@@ -28,9 +32,106 @@ namespace SISHOMEROGIL.Especialidades.Controles
 
         }
 
+        
+        /// <summary>
+        /// Pesquisa na tabela se há usuario com o cartao sus selecionado
+        /// </summary>
+        /// <returns>verdadeiro ou falso</returns>
+        public bool PesquisaUsuarioPorCartaoSUS()
+        {
+            try
+            {
+                Dados = new AcessoDadosEspecialidades();
+                DataTable tabela = Dados.ConsultaCNS(CNS);
+                if (tabela.Rows.Count == 1)
+                {
+                    PreencheDados(tabela);
+                    return true;
+                }
+                else
+                    return false;
+
+            }
+            catch (Exception err)
+            {
+                System.Windows.Forms.MessageBox.Show(err.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Preenche os dados utilizando a tabela retornada do banco de dados
+        /// </summary>
+        private void PreencheDados(DataTable _tabela)
+        {
+            DataRow linha = _tabela.Rows[0];
+            Nome = linha["NOME"].ToString();
+            IDUsuario = linha["IDUSUARIO"].ToString();
+            Prontuario = linha["PRONTUARIO"].ToString();
+            DataNascimento = linha["DTNASCIMENTO"].ToString();
+            CNS = linha["CARTAOSUS"].ToString();
+            CEP = linha["CEP"].ToString();            
+            AcessoDadosEspecialidades access = new AcessoDadosEspecialidades();
+            DataRow linhacep = access.ConsultaCEP(CEP).Rows[0];
+            if (!linhacep[0].ToString().Equals(""))
+            {
+                Logradouro = linhacep["ENDERECO"].ToString();
+                Bairro = linhacep["BAIRRO"].ToString();
+            }
+            Numero = linha["ENDNUMERO"].ToString();
+            Complemento = linha["ENDCOMPLEMENTO"].ToString();
+            CPF = linha["CPF"].ToString();
+            Mae = linha["NOMEMAE"].ToString();
+            TelefoneFixo = linha["TELFIXO"].ToString();
+            TelefoneCelular = linha["TELCEL"].ToString();
+        }
 
 
-
+        public bool PesquisaUsuarioPorProntuarioFireBird()
+        {
+            try
+            {
+                AcessoFireBird acesso = new AcessoFireBird();
+                DataTable tabela = acesso.RetornaNomeUsuarioCadastrado(Prontuario);
+                if (tabela.Rows.Count == 1)
+                {
+                    DataRow linha = tabela.Rows[0];
+                    Nome = linha["DSUSUARIO"].ToString();
+                    DialogResult resultado = MessageBox.Show(Nome, 
+                        "Selecionar nome", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (resultado == DialogResult.Yes)
+                    {
+                        Prontuario = linha["CDUSUARIO"].ToString();
+                        DataNascimento = linha["DTNASCIMENTO"].ToString();
+                        CPF = linha["NRCPF"].ToString();
+                        Mae = linha["DSMAE"].ToString();
+                        CEP = linha["NRCEP"].ToString();
+                        Numero = linha["NRLOGRADOURO"].ToString();
+                        Complemento = linha["DSCOMPLEMENTO"].ToString();
+                        TelefoneFixo = linha["NRTELEFONE"].ToString();
+                        TelefoneCelular = linha["NRCELULAR"].ToString();
+                        AcessoDadosEspecialidades access = new AcessoDadosEspecialidades();
+                        DataRow linhacep = access.ConsultaCEP(CEP).Rows[0];
+                        if (!linhacep[0].ToString().Equals(""))
+                        {
+                            Logradouro = linhacep["ENDERECO"].ToString();
+                            Bairro = linhacep["BAIRRO"].ToString();
+                        }
+                        else
+                            MessageBox.Show("CEP incorreto, confirme.");
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
+            catch (Exception)
+            {                
+                throw;
+            }
+        }
 
         #region Valida CPF
         public bool ValidaCPF(string cpf)
@@ -90,17 +191,18 @@ namespace SISHOMEROGIL.Especialidades.Controles
         /// </summary>
         /// <param name="cns">Número de CNS a ser checado</param>
         /// <returns>True, se o número é válido; False, se for inválido.</returns>
-        public bool ConsultaCNS(string cns)
+        public bool ValidaCNS()
         {
+            string cns = CNS;
             bool result = false;
             cns = cns.Trim();
             if ((cns.Substring(0, 1) == "8") || (cns.Substring(0, 1) == "9"))
             {
-                result = chkNumeroProvisorio(cns);
+                result = chkNumeroProvisorio();
             }
             else
             {
-                result = chkNumeroDefinitivo(cns);
+                result = chkNumeroDefinitivo();
             }
             return result;
         }
@@ -110,8 +212,9 @@ namespace SISHOMEROGIL.Especialidades.Controles
         /// </summary>
         /// <param name="cns">Número de CNS a ser checado</param>
         /// <returns>True, se o número é válido; False, se for inválido.</returns>
-        private bool chkNumeroProvisorio(string cns)
+        private bool chkNumeroProvisorio()
         {
+            string cns = CNS;
             bool result = false;
             try
             {
@@ -150,8 +253,9 @@ namespace SISHOMEROGIL.Especialidades.Controles
         /// </summary>
         /// <param name="cns">Número de CNS a ser checado</param>
         /// <returns>True, se o número é válido; False, se for inválido.</returns>
-        private bool chkNumeroDefinitivo(string cns)
+        private bool chkNumeroDefinitivo()
         {
+            string cns = CNS;
             bool result = false;
             try
             {

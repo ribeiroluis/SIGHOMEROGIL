@@ -117,16 +117,17 @@
             // txProntuario
             // 
             this.txProntuario.BackColor = System.Drawing.Color.White;
-            this.txProntuario.Enabled = false;
-            this.txProntuario.Location = new System.Drawing.Point(557, 40);
+            this.txProntuario.Location = new System.Drawing.Point(412, 41);
             this.txProntuario.Name = "txProntuario";
+            this.txProntuario.ReadOnly = true;
             this.txProntuario.Size = new System.Drawing.Size(89, 25);
             this.txProntuario.TabIndex = 0;
+            this.txProntuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txProntuario_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(554, 20);
+            this.label1.Location = new System.Drawing.Point(409, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 0;
@@ -156,7 +157,6 @@
             // txNome
             // 
             this.txNome.BackColor = System.Drawing.Color.White;
-            this.txNome.Enabled = false;
             this.txNome.Location = new System.Drawing.Point(6, 89);
             this.txNome.Name = "txNome";
             this.txNome.ReadOnly = true;
@@ -175,9 +175,9 @@
             // txIDUsuario
             // 
             this.txIDUsuario.BackColor = System.Drawing.SystemColors.Control;
-            this.txIDUsuario.Enabled = false;
             this.txIDUsuario.Location = new System.Drawing.Point(125, 40);
             this.txIDUsuario.Name = "txIDUsuario";
+            this.txIDUsuario.ReadOnly = true;
             this.txIDUsuario.Size = new System.Drawing.Size(61, 25);
             this.txIDUsuario.TabIndex = 30;
             // 
@@ -252,8 +252,7 @@
             // txCPF
             // 
             this.txCPF.BackColor = System.Drawing.Color.White;
-            this.txCPF.Enabled = false;
-            this.txCPF.Location = new System.Drawing.Point(412, 41);
+            this.txCPF.Location = new System.Drawing.Point(507, 41);
             this.txCPF.Mask = "000,000,000-00";
             this.txCPF.Name = "txCPF";
             this.txCPF.ReadOnly = true;
@@ -264,7 +263,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(412, 21);
+            this.label12.Location = new System.Drawing.Point(507, 21);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(32, 17);
             this.label12.TabIndex = 23;
@@ -273,7 +272,6 @@
             // txTelCelular
             // 
             this.txTelCelular.BackColor = System.Drawing.Color.White;
-            this.txTelCelular.Enabled = false;
             this.txTelCelular.Location = new System.Drawing.Point(390, 185);
             this.txTelCelular.Mask = "(99) 0000-0000";
             this.txTelCelular.Name = "txTelCelular";
@@ -294,7 +292,6 @@
             // txTelFixo
             // 
             this.txTelFixo.BackColor = System.Drawing.Color.White;
-            this.txTelFixo.Enabled = false;
             this.txTelFixo.Location = new System.Drawing.Point(280, 185);
             this.txTelFixo.Mask = "(99) 0000-0000";
             this.txTelFixo.Name = "txTelFixo";
@@ -315,7 +312,6 @@
             // txBairro
             // 
             this.txBairro.BackColor = System.Drawing.Color.White;
-            this.txBairro.Enabled = false;
             this.txBairro.Location = new System.Drawing.Point(6, 185);
             this.txBairro.Name = "txBairro";
             this.txBairro.ReadOnly = true;
@@ -343,7 +339,6 @@
             // txComplemento
             // 
             this.txComplemento.BackColor = System.Drawing.Color.White;
-            this.txComplemento.Enabled = false;
             this.txComplemento.Location = new System.Drawing.Point(655, 137);
             this.txComplemento.Name = "txComplemento";
             this.txComplemento.ReadOnly = true;
@@ -362,7 +357,6 @@
             // txNumero
             // 
             this.txNumero.BackColor = System.Drawing.Color.White;
-            this.txNumero.Enabled = false;
             this.txNumero.Location = new System.Drawing.Point(586, 137);
             this.txNumero.Name = "txNumero";
             this.txNumero.ReadOnly = true;
@@ -372,7 +366,6 @@
             // TxLogradouro
             // 
             this.TxLogradouro.BackColor = System.Drawing.Color.White;
-            this.TxLogradouro.Enabled = false;
             this.TxLogradouro.Location = new System.Drawing.Point(96, 137);
             this.TxLogradouro.Name = "TxLogradouro";
             this.TxLogradouro.ReadOnly = true;
@@ -391,7 +384,6 @@
             // txCep
             // 
             this.txCep.BackColor = System.Drawing.Color.White;
-            this.txCep.Enabled = false;
             this.txCep.Location = new System.Drawing.Point(7, 137);
             this.txCep.Mask = "00000-999";
             this.txCep.Name = "txCep";
@@ -412,7 +404,6 @@
             // txNomeMae
             // 
             this.txNomeMae.BackColor = System.Drawing.Color.White;
-            this.txNomeMae.Enabled = false;
             this.txNomeMae.Location = new System.Drawing.Point(390, 89);
             this.txNomeMae.Name = "txNomeMae";
             this.txNomeMae.ReadOnly = true;

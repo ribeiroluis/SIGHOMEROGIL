@@ -285,13 +285,13 @@ namespace SISHOMEROGIL.Recepcao
         {
             try
             {
-                DialogResult resultado = MessageBox.Show("Excluir registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                var nome = DtgDadosConsultas.CurrentRow.Cells["PACIENTE"].Value.ToString();
+
+                DialogResult resultado = MessageBox.Show("Excluir registro de "+ nome, "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
                 if (resultado == System.Windows.Forms.DialogResult.Yes)
-                {
-                    var nome = DtgDadosConsultas.CurrentRow.Cells[2].Value.ToString();
-                    var pront = DtgDadosConsultas.CurrentRow.Cells[1].Value.ToString();
+                {                    
                     VAGASTableAdapter vag = new VAGASTableAdapter();
-                    int idvaga = (int)vag.RetornaIdVaga(idMovimento, pront, nome);
+                    int idvaga = (int)DtgDadosConsultas.CurrentRow.Cells["IDVAGA"].Value;
                     vag.RemoveVaga(null,null,idvaga);
                     CarregaHoraConsulta(); 
                 }
