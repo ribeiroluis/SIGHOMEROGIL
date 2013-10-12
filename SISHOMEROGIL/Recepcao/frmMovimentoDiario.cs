@@ -43,15 +43,17 @@ namespace SISHOMEROGIL.Recepcao
                 this.mEDICOSTableAdapter.Fill(this.movimentoDiario.MEDICOS);
                 txMedico.SelectedItem = null;
                 txDia.Items.Clear();
-                txDia.SelectedItem = null;
+                txDia.SelectedItem = null;                
+                this.WindowState = FormWindowState.Maximized;
             }
             catch (Exception err)
             {
 
                 MessageBox.Show(err.Message);
-            }
-            
+            }           
+
         }
+
         
         private void txMedico_TextChanged(object sender, EventArgs e)
         {
@@ -301,6 +303,11 @@ namespace SISHOMEROGIL.Recepcao
 
                 MessageBox.Show(err.Message);
             }
+        }
+
+        public void Fechar()
+        {
+            this.Close();
         }
     }
 }

@@ -15,5 +15,10 @@ namespace SISHOMEROGIL
         {
             InitializeComponent();
         }
+
+        private void frmModelo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

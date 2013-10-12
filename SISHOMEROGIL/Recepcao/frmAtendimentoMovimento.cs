@@ -12,7 +12,7 @@ using System.Collections;
 
 namespace SISHOMEROGIL.Recepcao
 {
-    public partial class frmAtendimentoMovimento : frmModelo
+    public partial class frmAtendimentoMovimento: frmModelo
     {
         int idMedico = 0;
         int idMovimento;
@@ -20,18 +20,29 @@ namespace SISHOMEROGIL.Recepcao
         public frmAtendimentoMovimento()
         {
             InitializeComponent();
+            this.Aberto = true;
+            for (int i = 0; i < 100; i++)
+            {
+                for (int k = 0; k < 100; k++)
+                {
+                    this.Opacity += i;
+                }
+                
+            }
         }
 
         private void frmAtendimentoMovimento_Load(object sender, EventArgs e)
         {
             try
             {
+                
                 MEDICOSTableAdapter med = new MEDICOSTableAdapter();
                 DataTable tbMedicos = med.RetornaMedicoDoDia(DateTime.Now.ToShortDateString());
                 foreach (DataRow linha in tbMedicos.Rows)
                 {
                     txNomeMedico.Items.Add(linha["NOME"].ToString());
                 }
+                WindowState = FormWindowState.Maximized;
             }
             catch (Exception err)
             {
@@ -86,6 +97,12 @@ namespace SISHOMEROGIL.Recepcao
             //outros controles...
             timerDesistencias.Enabled = false;
             dtgDesistencias.DataSource = null;
+            txNome.Text = "";
+            txNome.ReadOnly = true;
+            txNomeDesistencia.Text = "";
+            txNomeDesistencia.ReadOnly = true;
+            txProntuario.Text = "";
+            txProntuarioDesistencia.Text = "";
 
         }
 
@@ -101,6 +118,7 @@ namespace SISHOMEROGIL.Recepcao
                     {
                         txNome.ReadOnly = false;
                         this.ActiveControl = txNome;
+                        txProntuario.Text = "00000FA";
                     }
                     else
                     {
@@ -154,9 +172,19 @@ namespace SISHOMEROGIL.Recepcao
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnInserir.Enabled = true;
-                this.ActiveControl = btnInserir;
-                txNome.Text = txNome.Text.ToUpper();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (ValidaTexto(txNome.Text.ToUpper()) && txNome.Text.Length > 14)
+                    {
+                        btnInserir.Enabled = true;
+                        this.ActiveControl = btnInserir;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Digite o nome completo ou não utilize acentos ou caracteres especiais");
+                        this.ActiveControl = txNome;
+                    }
+                }
             }
         }
         
@@ -248,6 +276,7 @@ namespace SISHOMEROGIL.Recepcao
                     {
                         txNomeDesistencia.ReadOnly = false;
                         this.ActiveControl = txNomeDesistencia;
+                        txProntuarioDesistencia.Text = "00000FA";
                     }
                     else
                     {
@@ -299,12 +328,24 @@ namespace SISHOMEROGIL.Recepcao
 
         private void txNomeDesistencia_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+           if (e.KeyCode == Keys.Enter)
             {
-                NPrioridade.ReadOnly = false;
-                this.ActiveControl = NPrioridade;
-                txNomeDesistencia.Text = txNomeDesistencia.Text.ToUpper();
-            }
+                if (!txNomeDesistencia.Text.Equals(""))
+                {
+                    if (ValidaTexto(txNomeDesistencia.Text.ToUpper()) && txNomeDesistencia.Text.Length > 10)
+                    {
+                        NPrioridade.ReadOnly = false;
+                        this.ActiveControl = NPrioridade;
+                        txNomeDesistencia.Text = txNomeDesistencia.Text.ToUpper();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Digite o nome completo ou não utilize acentos ou caracteres especiais");
+                        this.ActiveControl = txNomeDesistencia;
+                        txNomeDesistencia.Text = string.Empty;
+                    }
+                }
+            }    
         }
 
         private void NPrioridade_KeyDown(object sender, KeyEventArgs e)
@@ -458,7 +499,7 @@ namespace SISHOMEROGIL.Recepcao
 
                     if (horaAtual.Hour > hora.Hours) // && horaAtual.Minute > 20)
                     {
-                        // o minuto precisa ser trabalhado
+                        
                         EntregaDesistencia(hora);
                     }
                     else if (horaAtual.Hour == hora.Hours && horaAtual.Minute > (hora.Minutes+20))
@@ -581,5 +622,44 @@ namespace SISHOMEROGIL.Recepcao
                 MessageBox.Show(err.Message);
             }
         }
+
+        private bool ValidaTexto(string texto)
+        {
+
+            Hashtable caracteres = new Hashtable();
+            int i = 1;
+            foreach (var item in texto)
+            {
+                var x = caracteres[item];
+                if (x != null)
+                    caracteres[item] = (int)caracteres[item] + 1;
+                else
+                    caracteres.Add(item, 1);
+
+                if (item!=32)
+                    if (item < 65 || item > 90)
+                    return false;
+
+                if (i < texto.Length)
+                    if (item.Equals(texto[i]))
+                        return false;
+                i++;                
+            }
+
+            foreach (DictionaryEntry item in caracteres)
+            {
+                if (item.Key.Equals(' ') && (int)item.Value > 5)
+                    return false;               
+            }
+            return true;
+
+        }
+
+        public void Fechar()
+        {
+            this.Close();
+        }
+                
+        
     }
 }

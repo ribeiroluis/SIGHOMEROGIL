@@ -837,7 +837,7 @@ namespace SISHOMEROGIL
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnIncluirReceita_Click(object sender, EventArgs e)

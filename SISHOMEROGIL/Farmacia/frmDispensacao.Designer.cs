@@ -1285,7 +1285,6 @@
             this.Controls.Add(this.AbaDispensacao);
             this.Controls.Add(this.groupBox1);
             this.KeyPreview = true;
-            this.MaximizeBox = true;
             this.MinimizeBox = false;
             this.Name = "frmDispensacao";
             this.Text = "UBS HOMERO GIL - FARMACIA : DISPENSAÇÃO";

@@ -270,8 +270,12 @@
             this.ClientSize = new System.Drawing.Size(692, 466);
             this.Controls.Add(this.PainelMovimento);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMovimentoDiario";
-            this.Text = "frmMovimentoDiario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "INSERIR MOVIENTO";
             this.Load += new System.EventHandler(this.frmMovimentoDiario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

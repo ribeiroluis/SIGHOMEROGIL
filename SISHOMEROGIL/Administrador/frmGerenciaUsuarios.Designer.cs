@@ -54,9 +54,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.viewAcessoSistemaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.viewAcessoSistemaTableAdapter = new SISHOMEROGIL.UBSHOMEROGILDataSetTableAdapters.ViewAcessoSistemaTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +61,9 @@
             this.acessoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.setorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewAcessoSistemaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.viewAcessoSistemaTableAdapter = new SISHOMEROGIL.UBSHOMEROGILDataSetTableAdapters.ViewAcessoSistemaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uBSHOMEROGILDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIPOACESSOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sETORBindingSource)).BeginInit();
@@ -289,27 +289,6 @@
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Image = global::SISHOMEROGIL.Properties.Resources.clear;
-            this.btnLimpar.Location = new System.Drawing.Point(742, 83);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(101, 36);
-            this.btnLimpar.TabIndex = 22;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // viewAcessoSistemaBindingSource
-            // 
-            this.viewAcessoSistemaBindingSource.DataMember = "ViewAcessoSistema";
-            this.viewAcessoSistemaBindingSource.DataSource = this.uBSHOMEROGILDataSet;
-            // 
-            // viewAcessoSistemaTableAdapter
-            // 
-            this.viewAcessoSistemaTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -359,6 +338,27 @@
             this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
             this.loginDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // viewAcessoSistemaBindingSource
+            // 
+            this.viewAcessoSistemaBindingSource.DataMember = "ViewAcessoSistema";
+            this.viewAcessoSistemaBindingSource.DataSource = this.uBSHOMEROGILDataSet;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Image = global::SISHOMEROGIL.Properties.Resources.clear;
+            this.btnLimpar.Location = new System.Drawing.Point(742, 83);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(101, 36);
+            this.btnLimpar.TabIndex = 22;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // viewAcessoSistemaTableAdapter
+            // 
+            this.viewAcessoSistemaTableAdapter.ClearBeforeFill = true;
+            // 
             // frmGerenciaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -386,6 +386,7 @@
             this.Controls.Add(this.txIdusuarios);
             this.Controls.Add(this.label1);
             this.Name = "frmGerenciaUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmGerenciaUsuarios";
             this.Load += new System.EventHandler(this.frmGerenciaUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uBSHOMEROGILDataSet)).EndInit();

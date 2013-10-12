@@ -137,6 +137,27 @@ namespace SISHOMEROGIL.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap fundo {
+            get {
+                object obj = ResourceManager.GetObject("fundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fundo_brnaco_com_azul {
+            get {
+                object obj = ResourceManager.GetObject("fundo brnaco com azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap fundo1 {
+            get {
+                object obj = ResourceManager.GetObject("fundo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap sair {
             get {
                 object obj = ResourceManager.GetObject("sair", resourceCulture);

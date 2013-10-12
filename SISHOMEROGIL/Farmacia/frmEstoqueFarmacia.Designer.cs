@@ -248,6 +248,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmEstoqueFarmacia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SISHOMERO GIL - Gerenciar Estoque Farmácia";
             this.Load += new System.EventHandler(this.frmEstoqueFarmacia_Load);
             this.groupBox2.ResumeLayout(false);

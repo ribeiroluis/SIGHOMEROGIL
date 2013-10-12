@@ -130,9 +130,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOMERO GIL - LOGIN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

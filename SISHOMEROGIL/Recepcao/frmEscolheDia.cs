@@ -12,16 +12,19 @@ namespace SISHOMEROGIL.Recepcao
 {
     public partial class frmEscolheDia : frmModelo
     {
+        public MOVIMENTOTableAdapter mov;
+        public frmImrimirMovimento imp;
         public frmEscolheDia()
         {
             InitializeComponent();
+            mov = new MOVIMENTOTableAdapter();
+            imp = new frmImrimirMovimento();
         }
 
         private void frmEscolheDia_Load(object sender, EventArgs e)
         {
             try
             {
-                MOVIMENTOTableAdapter mov = new MOVIMENTOTableAdapter();
                 DataTable tb = mov.RetornaDatas();
                 foreach (DataRow item in tb.Rows)
                 {
@@ -61,13 +64,12 @@ namespace SISHOMEROGIL.Recepcao
                     temp.Insere(medico, data, horario, prontuario, nome);
                 }
 
-                frmImrimirMovimento imp = new frmImrimirMovimento();
+                imp = new frmImrimirMovimento();
                 imp.ShowDialog();
                 this.Close();
             }
             catch (Exception err)
             {
-
                 MessageBox.Show(err.Message);
             }
 

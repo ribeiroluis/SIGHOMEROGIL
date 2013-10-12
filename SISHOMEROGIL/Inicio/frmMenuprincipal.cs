@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using SISHOMEROGIL.Administrador;
 using SISHOMEROGIL.Recepcao;
 using SISHOMEROGIL.Acolhimento;
+using SISHOMEROGIL.PACS;
 
 
 namespace SISHOMEROGIL
@@ -22,6 +23,8 @@ namespace SISHOMEROGIL
         DateTime hora = new DateTime();
         AcessoDados Objacessar = new AcessoDados();
         DataTable TabelaUsuarioFirebird;
+        frmAtendimentoMovimento AtenderMovimento;
+        frmMovimentoDiario DigitarMovimento;
 
         public frmMenuPrincipal(int setor, int acesso, int idfuncionario, DataTable usuarioFirebird)
         {
@@ -106,7 +109,6 @@ namespace SISHOMEROGIL
 
         }
 
-
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -124,13 +126,15 @@ namespace SISHOMEROGIL
         {
 
             frmDispensacao dispensar = new frmDispensacao(IDFuncionario);
-            dispensar.ShowDialog();
+            dispensar.MdiParent = this;
+            dispensar.Show();
         }
 
         private void GerenciarEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEstoqueFarmacia estoque = new frmEstoqueFarmacia(IDFuncionario);
-            estoque.ShowDialog();
+            estoque.MdiParent = this;
+            estoque.Show();
         }
 
         private void SubMenuRecepcao_Click(object sender, EventArgs e)
@@ -150,8 +154,8 @@ namespace SISHOMEROGIL
         private void gerenciarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmGerenciaUsuarios frm = new frmGerenciaUsuarios();
-            this.Parent = frm.Parent;
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void senhasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -162,27 +166,63 @@ namespace SISHOMEROGIL
 
         private void digitarMovimentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMovimentoDiario mov = new frmMovimentoDiario();
-            mov.ShowDialog();
-
+            if (DigitarMovimento == null)
+            {
+                DigitarMovimento = new frmMovimentoDiario();
+                DigitarMovimento.MdiParent = this;
+                DigitarMovimento.Show(); 
+            }
+            else
+            {
+                DigitarMovimento.Fechar();
+                DigitarMovimento = null;
+                digitarMovimentoToolStripMenuItem_Click(sender, e);
+            }
         }
 
         private void atenderMovimentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAtendimentoMovimento mov = new frmAtendimentoMovimento();
-            mov.Show();
+            if (AtenderMovimento == null)
+            {
+                AtenderMovimento = new frmAtendimentoMovimento();
+                AtenderMovimento.MdiParent = this;
+                AtenderMovimento.Opacity = 0;
+                AtenderMovimento.Show();
+            }
+            else
+            {
+                AtenderMovimento.Fechar();
+                AtenderMovimento = null;
+                atenderMovimentoToolStripMenuItem_Click(sender, e);
+            }
+                
         }
 
         private void inserirVagasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmInserirVagas ins = new frmInserirVagas();
-            ins.ShowDialog();
+            ins.MdiParent = this;
+            ins.Show();
         }
 
         private void imprimirMovimentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEscolheDia escolhe = new frmEscolheDia();
-            escolhe.ShowDialog();
+            escolhe.MdiParent = this;
+            escolhe.imp.MdiParent = this;
+            escolhe.Show();
+        }
+
+        private void RelatorioEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void incluirNumerosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMicroareas micro = new frmMicroareas();
+            micro.MdiParent = this;
+            micro.Show();
         }
     }
 }

@@ -28,6 +28,7 @@ namespace SISHOMEROGIL.Administrador
             this.sETORTableAdapter.Fill(this.uBSHOMEROGILDataSet.SETOR);
             // TODO: This line of code loads data into the 'uBSHOMEROGILDataSet.viewUsuariosFormadeAcesso' table. You can move, or remove it, as needed.
             this.tIPOACESSOTableAdapter.Fill(this.uBSHOMEROGILDataSet.TIPOACESSO);
+            this.WindowState = FormWindowState.Maximized;
 
         }
 

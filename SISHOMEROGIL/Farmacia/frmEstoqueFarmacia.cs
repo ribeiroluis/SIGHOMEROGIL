@@ -164,6 +164,7 @@ namespace SISHOMEROGIL
                 }
 
                 dtgDadosItensEstoque.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
+                this.WindowState = FormWindowState.Maximized;
             }
             catch (Exception err)
             {

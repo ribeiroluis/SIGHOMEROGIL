@@ -57,6 +57,8 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarUsuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pACSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirNumerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -136,7 +138,8 @@
             // SubMenuAcolhimento
             // 
             this.SubMenuAcolhimento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inserirVagasToolStripMenuItem});
+            this.inserirVagasToolStripMenuItem,
+            this.pACSToolStripMenuItem});
             this.SubMenuAcolhimento.Enabled = false;
             this.SubMenuAcolhimento.Name = "SubMenuAcolhimento";
             this.SubMenuAcolhimento.Size = new System.Drawing.Size(92, 21);
@@ -211,6 +214,7 @@
             this.RelatorioEstoqueToolStripMenuItem.Name = "RelatorioEstoqueToolStripMenuItem";
             this.RelatorioEstoqueToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.RelatorioEstoqueToolStripMenuItem.Text = "Relatorio de Estoque";
+            this.RelatorioEstoqueToolStripMenuItem.Click += new System.EventHandler(this.RelatorioEstoqueToolStripMenuItem_Click);
             // 
             // SubMenuGerencia
             // 
@@ -289,6 +293,21 @@
             this.gerenciarUsuáriosToolStripMenuItem.Text = "Gerenciar Usuários";
             this.gerenciarUsuáriosToolStripMenuItem.Click += new System.EventHandler(this.gerenciarUsuáriosToolStripMenuItem_Click);
             // 
+            // pACSToolStripMenuItem
+            // 
+            this.pACSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirNumerosToolStripMenuItem});
+            this.pACSToolStripMenuItem.Name = "pACSToolStripMenuItem";
+            this.pACSToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.pACSToolStripMenuItem.Text = "PACS";
+            // 
+            // incluirNumerosToolStripMenuItem
+            // 
+            this.incluirNumerosToolStripMenuItem.Name = "incluirNumerosToolStripMenuItem";
+            this.incluirNumerosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.incluirNumerosToolStripMenuItem.Text = "Incluir Numeros";
+            this.incluirNumerosToolStripMenuItem.Click += new System.EventHandler(this.incluirNumerosToolStripMenuItem_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -342,5 +361,7 @@
         private System.Windows.Forms.ToolStripMenuItem atenderMovimentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inserirVagasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imprimirMovimentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pACSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirNumerosToolStripMenuItem;
     }
 }

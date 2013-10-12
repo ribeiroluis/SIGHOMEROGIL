@@ -90,7 +90,7 @@
             this.Controles.Location = new System.Drawing.Point(12, 55);
             this.Controles.Name = "Controles";
             this.Controles.SelectedIndex = 0;
-            this.Controles.Size = new System.Drawing.Size(675, 96);
+            this.Controles.Size = new System.Drawing.Size(675, 95);
             this.Controles.TabIndex = 1;
             this.Controles.SelectedIndexChanged += new System.EventHandler(this.Controles_SelectedIndexChanged);
             // 
@@ -106,7 +106,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(667, 66);
+            this.tabPage1.Size = new System.Drawing.Size(667, 65);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Desistencia";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -139,9 +139,9 @@
             // 
             this.btnInserirDesistencia.Enabled = false;
             this.btnInserirDesistencia.Image = global::SISHOMEROGIL.Properties.Resources._1356042729_1;
-            this.btnInserirDesistencia.Location = new System.Drawing.Point(564, 33);
+            this.btnInserirDesistencia.Location = new System.Drawing.Point(563, 33);
             this.btnInserirDesistencia.Name = "btnInserirDesistencia";
-            this.btnInserirDesistencia.Size = new System.Drawing.Size(32, 23);
+            this.btnInserirDesistencia.Size = new System.Drawing.Size(31, 24);
             this.btnInserirDesistencia.TabIndex = 30;
             this.btnInserirDesistencia.UseVisualStyleBackColor = true;
             this.btnInserirDesistencia.Click += new System.EventHandler(this.btnInserirDesistencia_Click);
@@ -149,7 +149,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(459, 13);
+            this.label7.Location = new System.Drawing.Point(458, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
             this.label7.TabIndex = 26;
@@ -175,7 +175,7 @@
             // 
             // txProntuarioDesistencia
             // 
-            this.txProntuarioDesistencia.Location = new System.Drawing.Point(11, 33);
+            this.txProntuarioDesistencia.Location = new System.Drawing.Point(10, 33);
             this.txProntuarioDesistencia.Name = "txProntuarioDesistencia";
             this.txProntuarioDesistencia.Size = new System.Drawing.Size(76, 25);
             this.txProntuarioDesistencia.TabIndex = 29;
@@ -204,7 +204,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(667, 66);
+            this.tabPage2.Size = new System.Drawing.Size(667, 65);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Agudo";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -213,9 +213,9 @@
             // 
             this.btnInserir.Enabled = false;
             this.btnInserir.Image = global::SISHOMEROGIL.Properties.Resources._1356042729_1;
-            this.btnInserir.Location = new System.Drawing.Point(585, 35);
+            this.btnInserir.Location = new System.Drawing.Point(584, 35);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(32, 23);
+            this.btnInserir.Size = new System.Drawing.Size(31, 24);
             this.btnInserir.TabIndex = 25;
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -232,7 +232,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(203, 15);
+            this.label4.Location = new System.Drawing.Point(203, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 17);
             this.label4.TabIndex = 18;
@@ -250,7 +250,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 15);
+            this.label5.Location = new System.Drawing.Point(6, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 17);
             this.label5.TabIndex = 21;
@@ -267,7 +267,7 @@
             // lbPronturario
             // 
             this.lbPronturario.AutoSize = true;
-            this.lbPronturario.Location = new System.Drawing.Point(121, 15);
+            this.lbPronturario.Location = new System.Drawing.Point(121, 14);
             this.lbPronturario.Name = "lbPronturario";
             this.lbPronturario.Size = new System.Drawing.Size(69, 17);
             this.lbPronturario.TabIndex = 19;
@@ -277,7 +277,7 @@
             // 
             this.txHora.BackColor = System.Drawing.SystemColors.Info;
             this.txHora.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txHora.Location = new System.Drawing.Point(53, 35);
+            this.txHora.Location = new System.Drawing.Point(52, 35);
             this.txHora.Name = "txHora";
             this.txHora.ReadOnly = true;
             this.txHora.Size = new System.Drawing.Size(65, 25);
@@ -286,7 +286,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 15);
+            this.label3.Location = new System.Drawing.Point(50, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 20;
@@ -317,7 +317,7 @@
             this.painelMovimento.Controls.Add(this.DtgDadosConsultas);
             this.painelMovimento.Location = new System.Drawing.Point(15, 157);
             this.painelMovimento.Name = "painelMovimento";
-            this.painelMovimento.Size = new System.Drawing.Size(675, 296);
+            this.painelMovimento.Size = new System.Drawing.Size(675, 263);
             this.painelMovimento.TabIndex = 6;
             this.painelMovimento.TabStop = false;
             this.painelMovimento.Text = "Movimento: ";
@@ -333,7 +333,7 @@
             this.DtgDadosConsultas.Location = new System.Drawing.Point(3, 21);
             this.DtgDadosConsultas.Name = "DtgDadosConsultas";
             this.DtgDadosConsultas.ReadOnly = true;
-            this.DtgDadosConsultas.Size = new System.Drawing.Size(669, 272);
+            this.DtgDadosConsultas.Size = new System.Drawing.Size(668, 239);
             this.DtgDadosConsultas.TabIndex = 0;
             this.DtgDadosConsultas.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DtgDadosConsultas_CellMouseDoubleClick);
             // 
@@ -366,7 +366,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtgDesistencias);
-            this.groupBox1.Location = new System.Drawing.Point(15, 459);
+            this.groupBox1.Location = new System.Drawing.Point(16, 426);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(675, 167);
             this.groupBox1.TabIndex = 8;
@@ -384,7 +384,7 @@
             this.dtgDesistencias.Location = new System.Drawing.Point(3, 21);
             this.dtgDesistencias.Name = "dtgDesistencias";
             this.dtgDesistencias.ReadOnly = true;
-            this.dtgDesistencias.Size = new System.Drawing.Size(669, 143);
+            this.dtgDesistencias.Size = new System.Drawing.Size(668, 143);
             this.dtgDesistencias.TabIndex = 0;
             this.dtgDesistencias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDesistencias_CellDoubleClick);
             // 
@@ -405,9 +405,8 @@
             // 
             // frmAtendimentoMovimento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 666);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(749, 605);
             this.Controls.Add(this.lkFaltosos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnRelogio);
@@ -416,8 +415,15 @@
             this.Controls.Add(this.txNomeMedico);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.Controles);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAtendimentoMovimento";
-            this.Text = "frmAtendimentoMovimento";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "HOMERO GIL - ATENDER MOVIMENTO";
             this.Load += new System.EventHandler(this.frmAtendimentoMovimento_Load);
             this.Controles.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -469,5 +475,6 @@
         private System.Windows.Forms.DataGridView dtgDesistencias;
         private System.Windows.Forms.Timer timerDesistencias;
         private System.Windows.Forms.LinkLabel lkFaltosos;
+        public bool Aberto;
     }
 }

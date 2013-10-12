@@ -43,7 +43,7 @@
             // 
             this.pictureBox2.Image = global::SISHOMEROGIL.Properties.Resources.brasaobetim;
             this.pictureBox2.Location = new System.Drawing.Point(37, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(37, 43);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,7 +54,7 @@
             // 
             this.pictureBox1.Image = global::SISHOMEROGIL.Properties.Resources.suslogo;
             this.pictureBox1.Location = new System.Drawing.Point(426, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +75,7 @@
             // ProgressBar
             // 
             this.ProgressBar.Location = new System.Drawing.Point(13, 188);
-            this.ProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(518, 19);
             this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -109,9 +109,12 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmTelaSplash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTelaSplash";
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

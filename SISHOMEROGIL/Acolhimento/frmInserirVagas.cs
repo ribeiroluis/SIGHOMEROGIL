@@ -700,5 +700,12 @@ namespace SISHOMEROGIL.Acolhimento
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void frmInserirVagas_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'movimentoDiario.MEDICOS' table. You can move, or remove it, as needed.
+            this.mEDICOSTableAdapter.Fill(this.movimentoDiario.MEDICOS);
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

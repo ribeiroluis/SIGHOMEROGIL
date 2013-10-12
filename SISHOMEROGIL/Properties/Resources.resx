@@ -136,11 +136,11 @@
   <data name="1356042729_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1356042729_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="clear16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clear16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="confirmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\confirmar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,13 +151,22 @@
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1355246967_Login Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1355246967_Login Manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancelar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancelar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1355246967_Login Manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1355246967_Login Manager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo brnaco com azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo brnaco com azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
