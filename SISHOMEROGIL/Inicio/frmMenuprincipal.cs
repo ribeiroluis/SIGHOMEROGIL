@@ -209,7 +209,6 @@ namespace SISHOMEROGIL
         {
             frmEscolheDia escolhe = new frmEscolheDia();
             escolhe.MdiParent = this;
-            escolhe.imp.MdiParent = this;
             escolhe.Show();
         }
 

@@ -18,7 +18,7 @@ namespace SISHOMEROGIL.Recepcao
 
         private void frmImrimirMovimento_Load(object sender, EventArgs e)
         {
-            MovimentoDia11.Refresh();
+           MovimentoDia1.Refresh();
         }
     }
 }

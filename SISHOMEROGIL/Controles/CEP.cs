@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SISHOMEROGIL.BancoDados.BDCEPDataSetTableAdapters;
+//using SISHOMEROGIL.BancoDados.BDCEPDataSetTableAdapters;
+using SISHOMEROGIL.BancoDados.ExemploDataSetTableAdapters;
 using System.Data;
 
 namespace SISHOMEROGIL.Controles
@@ -16,7 +17,7 @@ namespace SISHOMEROGIL.Controles
         public string UF { get; set; }        
         public List<CEP> ListaCEPCadastrados { get; set; }
 
-        viewBuscaCEPTableAdapter BDCep { get; set; }
+       viewBuscaCEPTableAdapter BDCep { get; set; }
 
         public CEP()
         {

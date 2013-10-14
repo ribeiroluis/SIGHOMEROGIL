@@ -28,45 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.gpEnderecos = new System.Windows.Forms.GroupBox();
             this.linkConsultaCEP = new System.Windows.Forms.LinkLabel();
             this.lbBairro = new System.Windows.Forms.Label();
             this.txLogradouro = new System.Windows.Forms.TextBox();
             this.GpTipo = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BtnAcolhimento = new System.Windows.Forms.Button();
+            this.btnAcolhimentoPrioridade = new System.Windows.Forms.Button();
+            this.GPMarcacao = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnMarcacaoNormal = new System.Windows.Forms.Button();
+            this.btnMarcacaoPrioridade = new System.Windows.Forms.Button();
+            this.gpEnderecos.SuspendLayout();
             this.GpTipo.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.GPMarcacao.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpEnderecos
             // 
-            this.groupBox1.Controls.Add(this.btnPesquisar);
-            this.groupBox1.Controls.Add(this.linkConsultaCEP);
-            this.groupBox1.Controls.Add(this.lbBairro);
-            this.groupBox1.Controls.Add(this.txLogradouro);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(781, 137);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Endereço do Paciente para o acolhimento";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(697, 104);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 3;
-            this.btnPesquisar.Text = "button1";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Visible = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.gpEnderecos.Controls.Add(this.linkConsultaCEP);
+            this.gpEnderecos.Controls.Add(this.lbBairro);
+            this.gpEnderecos.Controls.Add(this.txLogradouro);
+            this.gpEnderecos.Location = new System.Drawing.Point(12, 12);
+            this.gpEnderecos.Name = "gpEnderecos";
+            this.gpEnderecos.Size = new System.Drawing.Size(781, 112);
+            this.gpEnderecos.TabIndex = 0;
+            this.gpEnderecos.TabStop = false;
+            this.gpEnderecos.Text = "Endereço do Paciente para o acolhimento";
             // 
             // linkConsultaCEP
             // 
@@ -100,97 +91,152 @@
             // 
             // GpTipo
             // 
-            this.GpTipo.Controls.Add(this.button2);
-            this.GpTipo.Controls.Add(this.button1);
-            this.GpTipo.Location = new System.Drawing.Point(220, 172);
+            this.GpTipo.Controls.Add(this.label3);
+            this.GpTipo.Controls.Add(this.label1);
+            this.GpTipo.Controls.Add(this.BtnAcolhimento);
+            this.GpTipo.Controls.Add(this.btnAcolhimentoPrioridade);
+            this.GpTipo.Location = new System.Drawing.Point(163, 146);
             this.GpTipo.Name = "GpTipo";
-            this.GpTipo.Size = new System.Drawing.Size(383, 100);
+            this.GpTipo.Size = new System.Drawing.Size(539, 100);
             this.GpTipo.TabIndex = 1;
             this.GpTipo.TabStop = false;
             this.GpTipo.Text = "Acolhimento";
+            this.GpTipo.Visible = false;
             // 
-            // button1
+            // label3
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(68, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Sim";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Coral;
+            this.label3.Location = new System.Drawing.Point(452, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "00";
             // 
-            // button2
+            // label1
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(224, 33);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 49);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Sim";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Prioridade";
             // 
-            // groupBox2
+            // BtnAcolhimento
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Location = new System.Drawing.Point(220, 296);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(383, 100);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Marcação de consultas";
+            this.BtnAcolhimento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAcolhimento.Location = new System.Drawing.Point(252, 33);
+            this.BtnAcolhimento.Name = "BtnAcolhimento";
+            this.BtnAcolhimento.Size = new System.Drawing.Size(127, 49);
+            this.BtnAcolhimento.TabIndex = 0;
+            this.BtnAcolhimento.Text = "Não";
+            this.BtnAcolhimento.UseVisualStyleBackColor = true;
+            this.BtnAcolhimento.Click += new System.EventHandler(this.BtnAcolhimento_Click);
             // 
-            // button3
+            // btnAcolhimentoPrioridade
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(224, 33);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 49);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Sim";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAcolhimentoPrioridade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcolhimentoPrioridade.Location = new System.Drawing.Point(119, 33);
+            this.btnAcolhimentoPrioridade.Name = "btnAcolhimentoPrioridade";
+            this.btnAcolhimentoPrioridade.Size = new System.Drawing.Size(127, 49);
+            this.btnAcolhimentoPrioridade.TabIndex = 0;
+            this.btnAcolhimentoPrioridade.Text = "Sim";
+            this.btnAcolhimentoPrioridade.UseVisualStyleBackColor = true;
+            this.btnAcolhimentoPrioridade.Click += new System.EventHandler(this.btnAcolhimentoPrioridade_Click);
             // 
-            // button4
+            // GPMarcacao
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(68, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 49);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Sim";
-            this.button4.UseVisualStyleBackColor = true;
+            this.GPMarcacao.Controls.Add(this.label4);
+            this.GPMarcacao.Controls.Add(this.label2);
+            this.GPMarcacao.Controls.Add(this.btnMarcacaoNormal);
+            this.GPMarcacao.Controls.Add(this.btnMarcacaoPrioridade);
+            this.GPMarcacao.Location = new System.Drawing.Point(163, 269);
+            this.GPMarcacao.Name = "GPMarcacao";
+            this.GPMarcacao.Size = new System.Drawing.Size(539, 100);
+            this.GPMarcacao.TabIndex = 2;
+            this.GPMarcacao.TabStop = false;
+            this.GPMarcacao.Text = "Marcação de consultas";
+            this.GPMarcacao.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Coral;
+            this.label4.Location = new System.Drawing.Point(452, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 25);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "00";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Prioridade";
+            // 
+            // btnMarcacaoNormal
+            // 
+            this.btnMarcacaoNormal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcacaoNormal.Location = new System.Drawing.Point(252, 33);
+            this.btnMarcacaoNormal.Name = "btnMarcacaoNormal";
+            this.btnMarcacaoNormal.Size = new System.Drawing.Size(127, 49);
+            this.btnMarcacaoNormal.TabIndex = 0;
+            this.btnMarcacaoNormal.Text = "Não";
+            this.btnMarcacaoNormal.UseVisualStyleBackColor = true;
+            this.btnMarcacaoNormal.Click += new System.EventHandler(this.btnMarcacaoNormal_Click);
+            // 
+            // btnMarcacaoPrioridade
+            // 
+            this.btnMarcacaoPrioridade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcacaoPrioridade.Location = new System.Drawing.Point(119, 33);
+            this.btnMarcacaoPrioridade.Name = "btnMarcacaoPrioridade";
+            this.btnMarcacaoPrioridade.Size = new System.Drawing.Size(127, 49);
+            this.btnMarcacaoPrioridade.TabIndex = 0;
+            this.btnMarcacaoPrioridade.Text = "Sim";
+            this.btnMarcacaoPrioridade.UseVisualStyleBackColor = true;
+            this.btnMarcacaoPrioridade.Click += new System.EventHandler(this.btnMarcacaoPrioridade_Click);
             // 
             // frmSenhasAcolhimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 435);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.GPMarcacao);
             this.Controls.Add(this.GpTipo);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpEnderecos);
             this.Name = "frmSenhasAcolhimento";
             this.Text = "frmSenhasAcolhimento";
             this.Load += new System.EventHandler(this.frmSenhasAcolhimento_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gpEnderecos.ResumeLayout(false);
+            this.gpEnderecos.PerformLayout();
             this.GpTipo.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.GpTipo.PerformLayout();
+            this.GPMarcacao.ResumeLayout(false);
+            this.GPMarcacao.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gpEnderecos;
         private System.Windows.Forms.TextBox txLogradouro;
         private System.Windows.Forms.Label lbBairro;
         private System.Windows.Forms.LinkLabel linkConsultaCEP;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.GroupBox GpTipo;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnAcolhimento;
+        private System.Windows.Forms.Button btnAcolhimentoPrioridade;
+        private System.Windows.Forms.GroupBox GPMarcacao;
+        private System.Windows.Forms.Button btnMarcacaoNormal;
+        private System.Windows.Forms.Button btnMarcacaoPrioridade;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -62,8 +62,8 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private MovimentoDia1 MovimentoDia11;
+        //private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        //private MovimentoDia1 MovimentoDia11;
 
     }
 }
