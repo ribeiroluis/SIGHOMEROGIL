@@ -1,0 +1,15 @@
+﻿body{
+}
+table
+{
+	table-layout: auto;
+	border-collapse: collapse;
+	border: thin solid #000000;
+	font-family: 'Times New Roman' , Times, serif;
+	visibility: visible;
+	display: table;
+}
+td
+{
+	border: medium groove #000066; 
+	}

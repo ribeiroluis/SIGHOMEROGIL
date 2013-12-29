@@ -36,7 +36,7 @@ namespace SISHOMEROGIL.BancoDados {
         
         private viewMovimentoDataTable tableviewMovimento;
         
-        private MOVIMENTO_TEMPDataTable tableMOVIMENTO_TEMP;
+        private viewMovimentoDiaDataTable tableviewMovimentoDia;
         
         private global::System.Data.DataRelation relationFK_VAGAS_REFERENCE_MOVIMENT;
         
@@ -92,8 +92,8 @@ namespace SISHOMEROGIL.BancoDados {
                 if ((ds.Tables["viewMovimento"] != null)) {
                     base.Tables.Add(new viewMovimentoDataTable(ds.Tables["viewMovimento"]));
                 }
-                if ((ds.Tables["MOVIMENTO_TEMP"] != null)) {
-                    base.Tables.Add(new MOVIMENTO_TEMPDataTable(ds.Tables["MOVIMENTO_TEMP"]));
+                if ((ds.Tables["viewMovimentoDia"] != null)) {
+                    base.Tables.Add(new viewMovimentoDiaDataTable(ds.Tables["viewMovimentoDia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,9 +177,9 @@ namespace SISHOMEROGIL.BancoDados {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public MOVIMENTO_TEMPDataTable MOVIMENTO_TEMP {
+        public viewMovimentoDiaDataTable viewMovimentoDia {
             get {
-                return this.tableMOVIMENTO_TEMP;
+                return this.tableviewMovimentoDia;
             }
         }
         
@@ -268,8 +268,8 @@ namespace SISHOMEROGIL.BancoDados {
                 if ((ds.Tables["viewMovimento"] != null)) {
                     base.Tables.Add(new viewMovimentoDataTable(ds.Tables["viewMovimento"]));
                 }
-                if ((ds.Tables["MOVIMENTO_TEMP"] != null)) {
-                    base.Tables.Add(new MOVIMENTO_TEMPDataTable(ds.Tables["MOVIMENTO_TEMP"]));
+                if ((ds.Tables["viewMovimentoDia"] != null)) {
+                    base.Tables.Add(new viewMovimentoDiaDataTable(ds.Tables["viewMovimentoDia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -340,10 +340,10 @@ namespace SISHOMEROGIL.BancoDados {
                     this.tableviewMovimento.InitVars();
                 }
             }
-            this.tableMOVIMENTO_TEMP = ((MOVIMENTO_TEMPDataTable)(base.Tables["MOVIMENTO_TEMP"]));
+            this.tableviewMovimentoDia = ((viewMovimentoDiaDataTable)(base.Tables["viewMovimentoDia"]));
             if ((initTable == true)) {
-                if ((this.tableMOVIMENTO_TEMP != null)) {
-                    this.tableMOVIMENTO_TEMP.InitVars();
+                if ((this.tableviewMovimentoDia != null)) {
+                    this.tableviewMovimentoDia.InitVars();
                 }
             }
             this.relationFK_VAGAS_REFERENCE_MOVIMENT = this.Relations["FK_VAGAS_REFERENCE_MOVIMENT"];
@@ -372,8 +372,8 @@ namespace SISHOMEROGIL.BancoDados {
             base.Tables.Add(this.tableMEDICOS);
             this.tableviewMovimento = new viewMovimentoDataTable();
             base.Tables.Add(this.tableviewMovimento);
-            this.tableMOVIMENTO_TEMP = new MOVIMENTO_TEMPDataTable();
-            base.Tables.Add(this.tableMOVIMENTO_TEMP);
+            this.tableviewMovimentoDia = new viewMovimentoDiaDataTable();
+            base.Tables.Add(this.tableviewMovimentoDia);
             this.relationFK_VAGAS_REFERENCE_MOVIMENT = new global::System.Data.DataRelation("FK_VAGAS_REFERENCE_MOVIMENT", new global::System.Data.DataColumn[] {
                         this.tableMOVIMENTO.IDMOVIMENTOColumn}, new global::System.Data.DataColumn[] {
                         this.tableVAGAS.IDMOVIMENTOColumn}, false);
@@ -430,7 +430,7 @@ namespace SISHOMEROGIL.BancoDados {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeMOVIMENTO_TEMP() {
+        private bool ShouldSerializeviewMovimentoDia() {
             return false;
         }
         
@@ -508,7 +508,7 @@ namespace SISHOMEROGIL.BancoDados {
         public delegate void viewMovimentoRowChangeEventHandler(object sender, viewMovimentoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void MOVIMENTO_TEMPRowChangeEventHandler(object sender, MOVIMENTO_TEMPRowChangeEvent e);
+        public delegate void viewMovimentoDiaRowChangeEventHandler(object sender, viewMovimentoDiaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2460,22 +2460,22 @@ namespace SISHOMEROGIL.BancoDados {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class MOVIMENTO_TEMPDataTable : global::System.Data.TypedTableBase<MOVIMENTO_TEMPRow> {
-            
-            private global::System.Data.DataColumn columnMEDICO;
+        public partial class viewMovimentoDiaDataTable : global::System.Data.TypedTableBase<viewMovimentoDiaRow> {
             
             private global::System.Data.DataColumn columnDATA;
+            
+            private global::System.Data.DataColumn columnMEDICO;
             
             private global::System.Data.DataColumn columnHORARIO;
             
             private global::System.Data.DataColumn columnPRONTUARIO;
             
-            private global::System.Data.DataColumn columnNOME;
+            private global::System.Data.DataColumn columnPACIENTE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MOVIMENTO_TEMPDataTable() {
-                this.TableName = "MOVIMENTO_TEMP";
+            public viewMovimentoDiaDataTable() {
+                this.TableName = "viewMovimentoDia";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2483,7 +2483,7 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal MOVIMENTO_TEMPDataTable(global::System.Data.DataTable table) {
+            internal viewMovimentoDiaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2500,17 +2500,9 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected MOVIMENTO_TEMPDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected viewMovimentoDiaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MEDICOColumn {
-                get {
-                    return this.columnMEDICO;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2518,6 +2510,14 @@ namespace SISHOMEROGIL.BancoDados {
             public global::System.Data.DataColumn DATAColumn {
                 get {
                     return this.columnDATA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MEDICOColumn {
+                get {
+                    return this.columnMEDICO;
                 }
             }
             
@@ -2539,9 +2539,9 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NOMEColumn {
+            public global::System.Data.DataColumn PACIENTEColumn {
                 get {
-                    return this.columnNOME;
+                    return this.columnPACIENTE;
                 }
             }
             
@@ -2556,49 +2556,49 @@ namespace SISHOMEROGIL.BancoDados {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MOVIMENTO_TEMPRow this[int index] {
+            public viewMovimentoDiaRow this[int index] {
                 get {
-                    return ((MOVIMENTO_TEMPRow)(this.Rows[index]));
+                    return ((viewMovimentoDiaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MOVIMENTO_TEMPRowChangeEventHandler MOVIMENTO_TEMPRowChanging;
+            public event viewMovimentoDiaRowChangeEventHandler viewMovimentoDiaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MOVIMENTO_TEMPRowChangeEventHandler MOVIMENTO_TEMPRowChanged;
+            public event viewMovimentoDiaRowChangeEventHandler viewMovimentoDiaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MOVIMENTO_TEMPRowChangeEventHandler MOVIMENTO_TEMPRowDeleting;
+            public event viewMovimentoDiaRowChangeEventHandler viewMovimentoDiaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event MOVIMENTO_TEMPRowChangeEventHandler MOVIMENTO_TEMPRowDeleted;
+            public event viewMovimentoDiaRowChangeEventHandler viewMovimentoDiaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddMOVIMENTO_TEMPRow(MOVIMENTO_TEMPRow row) {
+            public void AddviewMovimentoDiaRow(viewMovimentoDiaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MOVIMENTO_TEMPRow AddMOVIMENTO_TEMPRow(string MEDICO, string DATA, string HORARIO, string PRONTUARIO, string NOME) {
-                MOVIMENTO_TEMPRow rowMOVIMENTO_TEMPRow = ((MOVIMENTO_TEMPRow)(this.NewRow()));
+            public viewMovimentoDiaRow AddviewMovimentoDiaRow(System.DateTime DATA, string MEDICO, System.TimeSpan HORARIO, string PRONTUARIO, string PACIENTE) {
+                viewMovimentoDiaRow rowviewMovimentoDiaRow = ((viewMovimentoDiaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        MEDICO,
                         DATA,
+                        MEDICO,
                         HORARIO,
                         PRONTUARIO,
-                        NOME};
-                rowMOVIMENTO_TEMPRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowMOVIMENTO_TEMPRow);
-                return rowMOVIMENTO_TEMPRow;
+                        PACIENTE};
+                rowviewMovimentoDiaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowviewMovimentoDiaRow);
+                return rowviewMovimentoDiaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                MOVIMENTO_TEMPDataTable cln = ((MOVIMENTO_TEMPDataTable)(base.Clone()));
+                viewMovimentoDiaDataTable cln = ((viewMovimentoDiaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2606,63 +2606,62 @@ namespace SISHOMEROGIL.BancoDados {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new MOVIMENTO_TEMPDataTable();
+                return new viewMovimentoDiaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnMEDICO = base.Columns["MEDICO"];
                 this.columnDATA = base.Columns["DATA"];
+                this.columnMEDICO = base.Columns["MEDICO"];
                 this.columnHORARIO = base.Columns["HORARIO"];
                 this.columnPRONTUARIO = base.Columns["PRONTUARIO"];
-                this.columnNOME = base.Columns["NOME"];
+                this.columnPACIENTE = base.Columns["PACIENTE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnDATA = new global::System.Data.DataColumn("DATA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA);
                 this.columnMEDICO = new global::System.Data.DataColumn("MEDICO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMEDICO);
-                this.columnDATA = new global::System.Data.DataColumn("DATA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA);
-                this.columnHORARIO = new global::System.Data.DataColumn("HORARIO", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnHORARIO = new global::System.Data.DataColumn("HORARIO", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHORARIO);
                 this.columnPRONTUARIO = new global::System.Data.DataColumn("PRONTUARIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPRONTUARIO);
-                this.columnNOME = new global::System.Data.DataColumn("NOME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME);
-                this.columnMEDICO.MaxLength = 50;
-                this.columnDATA.MaxLength = 50;
-                this.columnHORARIO.MaxLength = 50;
-                this.columnPRONTUARIO.MaxLength = 50;
-                this.columnNOME.MaxLength = 50;
+                this.columnPACIENTE = new global::System.Data.DataColumn("PACIENTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPACIENTE);
+                this.columnMEDICO.AllowDBNull = false;
+                this.columnMEDICO.MaxLength = 250;
+                this.columnPRONTUARIO.MaxLength = 10;
+                this.columnPACIENTE.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MOVIMENTO_TEMPRow NewMOVIMENTO_TEMPRow() {
-                return ((MOVIMENTO_TEMPRow)(this.NewRow()));
+            public viewMovimentoDiaRow NewviewMovimentoDiaRow() {
+                return ((viewMovimentoDiaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new MOVIMENTO_TEMPRow(builder);
+                return new viewMovimentoDiaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(MOVIMENTO_TEMPRow);
+                return typeof(viewMovimentoDiaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.MOVIMENTO_TEMPRowChanged != null)) {
-                    this.MOVIMENTO_TEMPRowChanged(this, new MOVIMENTO_TEMPRowChangeEvent(((MOVIMENTO_TEMPRow)(e.Row)), e.Action));
+                if ((this.viewMovimentoDiaRowChanged != null)) {
+                    this.viewMovimentoDiaRowChanged(this, new viewMovimentoDiaRowChangeEvent(((viewMovimentoDiaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2670,8 +2669,8 @@ namespace SISHOMEROGIL.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.MOVIMENTO_TEMPRowChanging != null)) {
-                    this.MOVIMENTO_TEMPRowChanging(this, new MOVIMENTO_TEMPRowChangeEvent(((MOVIMENTO_TEMPRow)(e.Row)), e.Action));
+                if ((this.viewMovimentoDiaRowChanging != null)) {
+                    this.viewMovimentoDiaRowChanging(this, new viewMovimentoDiaRowChangeEvent(((viewMovimentoDiaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2679,8 +2678,8 @@ namespace SISHOMEROGIL.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.MOVIMENTO_TEMPRowDeleted != null)) {
-                    this.MOVIMENTO_TEMPRowDeleted(this, new MOVIMENTO_TEMPRowChangeEvent(((MOVIMENTO_TEMPRow)(e.Row)), e.Action));
+                if ((this.viewMovimentoDiaRowDeleted != null)) {
+                    this.viewMovimentoDiaRowDeleted(this, new viewMovimentoDiaRowChangeEvent(((viewMovimentoDiaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2688,14 +2687,14 @@ namespace SISHOMEROGIL.BancoDados {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.MOVIMENTO_TEMPRowDeleting != null)) {
-                    this.MOVIMENTO_TEMPRowDeleting(this, new MOVIMENTO_TEMPRowChangeEvent(((MOVIMENTO_TEMPRow)(e.Row)), e.Action));
+                if ((this.viewMovimentoDiaRowDeleting != null)) {
+                    this.viewMovimentoDiaRowDeleting(this, new viewMovimentoDiaRowChangeEvent(((viewMovimentoDiaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveMOVIMENTO_TEMPRow(MOVIMENTO_TEMPRow row) {
+            public void RemoveviewMovimentoDiaRow(viewMovimentoDiaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2722,7 +2721,7 @@ namespace SISHOMEROGIL.BancoDados {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "MOVIMENTO_TEMPDataTable";
+                attribute2.FixedValue = "viewMovimentoDiaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3738,62 +3737,57 @@ namespace SISHOMEROGIL.BancoDados {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class MOVIMENTO_TEMPRow : global::System.Data.DataRow {
+        public partial class viewMovimentoDiaRow : global::System.Data.DataRow {
             
-            private MOVIMENTO_TEMPDataTable tableMOVIMENTO_TEMP;
+            private viewMovimentoDiaDataTable tableviewMovimentoDia;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal MOVIMENTO_TEMPRow(global::System.Data.DataRowBuilder rb) : 
+            internal viewMovimentoDiaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableMOVIMENTO_TEMP = ((MOVIMENTO_TEMPDataTable)(this.Table));
+                this.tableviewMovimentoDia = ((viewMovimentoDiaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime DATA {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableviewMovimentoDia.DATAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATA\' in table \'viewMovimentoDia\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableviewMovimentoDia.DATAColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string MEDICO {
                 get {
-                    try {
-                        return ((string)(this[this.tableMOVIMENTO_TEMP.MEDICOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MEDICO\' in table \'MOVIMENTO_TEMP\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableviewMovimentoDia.MEDICOColumn]));
                 }
                 set {
-                    this[this.tableMOVIMENTO_TEMP.MEDICOColumn] = value;
+                    this[this.tableviewMovimentoDia.MEDICOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DATA {
+            public System.TimeSpan HORARIO {
                 get {
                     try {
-                        return ((string)(this[this.tableMOVIMENTO_TEMP.DATAColumn]));
+                        return ((global::System.TimeSpan)(this[this.tableviewMovimentoDia.HORARIOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DATA\' in table \'MOVIMENTO_TEMP\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HORARIO\' in table \'viewMovimentoDia\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMOVIMENTO_TEMP.DATAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string HORARIO {
-                get {
-                    try {
-                        return ((string)(this[this.tableMOVIMENTO_TEMP.HORARIOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HORARIO\' in table \'MOVIMENTO_TEMP\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableMOVIMENTO_TEMP.HORARIOColumn] = value;
+                    this[this.tableviewMovimentoDia.HORARIOColumn] = value;
                 }
             }
             
@@ -3802,91 +3796,79 @@ namespace SISHOMEROGIL.BancoDados {
             public string PRONTUARIO {
                 get {
                     try {
-                        return ((string)(this[this.tableMOVIMENTO_TEMP.PRONTUARIOColumn]));
+                        return ((string)(this[this.tableviewMovimentoDia.PRONTUARIOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PRONTUARIO\' in table \'MOVIMENTO_TEMP\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PRONTUARIO\' in table \'viewMovimentoDia\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMOVIMENTO_TEMP.PRONTUARIOColumn] = value;
+                    this[this.tableviewMovimentoDia.PRONTUARIOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NOME {
+            public string PACIENTE {
                 get {
                     try {
-                        return ((string)(this[this.tableMOVIMENTO_TEMP.NOMEColumn]));
+                        return ((string)(this[this.tableviewMovimentoDia.PACIENTEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NOME\' in table \'MOVIMENTO_TEMP\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PACIENTE\' in table \'viewMovimentoDia\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMOVIMENTO_TEMP.NOMEColumn] = value;
+                    this[this.tableviewMovimentoDia.PACIENTEColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMEDICONull() {
-                return this.IsNull(this.tableMOVIMENTO_TEMP.MEDICOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMEDICONull() {
-                this[this.tableMOVIMENTO_TEMP.MEDICOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDATANull() {
-                return this.IsNull(this.tableMOVIMENTO_TEMP.DATAColumn);
+                return this.IsNull(this.tableviewMovimentoDia.DATAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDATANull() {
-                this[this.tableMOVIMENTO_TEMP.DATAColumn] = global::System.Convert.DBNull;
+                this[this.tableviewMovimentoDia.DATAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsHORARIONull() {
-                return this.IsNull(this.tableMOVIMENTO_TEMP.HORARIOColumn);
+                return this.IsNull(this.tableviewMovimentoDia.HORARIOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetHORARIONull() {
-                this[this.tableMOVIMENTO_TEMP.HORARIOColumn] = global::System.Convert.DBNull;
+                this[this.tableviewMovimentoDia.HORARIOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPRONTUARIONull() {
-                return this.IsNull(this.tableMOVIMENTO_TEMP.PRONTUARIOColumn);
+                return this.IsNull(this.tableviewMovimentoDia.PRONTUARIOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPRONTUARIONull() {
-                this[this.tableMOVIMENTO_TEMP.PRONTUARIOColumn] = global::System.Convert.DBNull;
+                this[this.tableviewMovimentoDia.PRONTUARIOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNOMENull() {
-                return this.IsNull(this.tableMOVIMENTO_TEMP.NOMEColumn);
+            public bool IsPACIENTENull() {
+                return this.IsNull(this.tableviewMovimentoDia.PACIENTEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNOMENull() {
-                this[this.tableMOVIMENTO_TEMP.NOMEColumn] = global::System.Convert.DBNull;
+            public void SetPACIENTENull() {
+                this[this.tableviewMovimentoDia.PACIENTEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4098,22 +4080,22 @@ namespace SISHOMEROGIL.BancoDados {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class MOVIMENTO_TEMPRowChangeEvent : global::System.EventArgs {
+        public class viewMovimentoDiaRowChangeEvent : global::System.EventArgs {
             
-            private MOVIMENTO_TEMPRow eventRow;
+            private viewMovimentoDiaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MOVIMENTO_TEMPRowChangeEvent(MOVIMENTO_TEMPRow row, global::System.Data.DataRowAction action) {
+            public viewMovimentoDiaRowChangeEvent(viewMovimentoDiaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MOVIMENTO_TEMPRow Row {
+            public viewMovimentoDiaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7481,7 +7463,7 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class MOVIMENTO_TEMPTableAdapter : global::System.ComponentModel.Component {
+    public partial class viewMovimentoDiaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7495,7 +7477,7 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public MOVIMENTO_TEMPTableAdapter() {
+        public viewMovimentoDiaTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7592,23 +7574,13 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "MOVIMENTO_TEMP";
-            tableMapping.ColumnMappings.Add("MEDICO", "MEDICO");
+            tableMapping.DataSetTable = "viewMovimentoDia";
             tableMapping.ColumnMappings.Add("DATA", "DATA");
+            tableMapping.ColumnMappings.Add("MEDICO", "MEDICO");
             tableMapping.ColumnMappings.Add("HORARIO", "HORARIO");
             tableMapping.ColumnMappings.Add("PRONTUARIO", "PRONTUARIO");
-            tableMapping.ColumnMappings.Add("NOME", "NOME");
+            tableMapping.ColumnMappings.Add("PACIENTE", "PACIENTE");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MOVIMENTO_TEMP] ([MEDICO], [DATA], [HORARIO], [PRONTUARIO], [N" +
-                "OME]) VALUES (@MEDICO, @DATA, @HORARIO, @PRONTUARIO, @NOME)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEDICO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MEDICO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORARIO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRONTUARIO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7621,32 +7593,24 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MEDICO, DATA, HORARIO, PRONTUARIO, NOME FROM dbo.MOVIMENTO_TEMP";
+            this._commandCollection[0].CommandText = "SELECT DATA, MEDICO, HORARIO, PRONTUARIO, PACIENTE FROM dbo.viewMovimentoDia";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM MOVIMENTO_TEMP";
+            this._commandCollection[1].CommandText = "SELECT     DATA, MEDICO, HORARIO, PRONTUARIO, PACIENTE\r\nFROM         viewMoviment" +
+                "oDia\r\nWHERE     (DATA = @data)\r\nORDER BY MEDICO, PRONTUARIO";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[MOVIMENTO_TEMP] ([MEDICO], [DATA], [HORARIO], [PRONTUARIO], [N" +
-                "OME]) VALUES (@MEDICO, @DATA, @HORARIO, @PRONTUARIO, @NOME)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MEDICO", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "MEDICO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORARIO", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "HORARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRONTUARIO", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "PRONTUARIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MovimentoDiario.MOVIMENTO_TEMPDataTable dataTable) {
+        public virtual int Fill(MovimentoDiario.viewMovimentoDiaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7659,9 +7623,9 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MovimentoDiario.MOVIMENTO_TEMPDataTable GetData() {
+        public virtual MovimentoDiario.viewMovimentoDiaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MovimentoDiario.MOVIMENTO_TEMPDataTable dataTable = new MovimentoDiario.MOVIMENTO_TEMPDataTable();
+            MovimentoDiario.viewMovimentoDiaDataTable dataTable = new MovimentoDiario.viewMovimentoDiaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7669,157 +7633,18 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MovimentoDiario.MOVIMENTO_TEMPDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MovimentoDiario dataSet) {
-            return this.Adapter.Update(dataSet, "MOVIMENTO_TEMP");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MEDICO, string DATA, string HORARIO, string PRONTUARIO, string NOME) {
-            if ((MEDICO == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual MovimentoDiario.viewMovimentoDiaDataTable RetornaMivimentosPorData(string data) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((data == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(MEDICO));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(data));
             }
-            if ((DATA == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DATA));
-            }
-            if ((HORARIO == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(HORARIO));
-            }
-            if ((PRONTUARIO == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PRONTUARIO));
-            }
-            if ((NOME == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(NOME));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int DeletaTodos() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int Insere(string MEDICO, string DATA, string HORARIO, string PRONTUARIO, string NOME) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            if ((MEDICO == null)) {
-                command.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[0].Value = ((string)(MEDICO));
-            }
-            if ((DATA == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[1].Value = ((string)(DATA));
-            }
-            if ((HORARIO == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(HORARIO));
-            }
-            if ((PRONTUARIO == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(PRONTUARIO));
-            }
-            if ((NOME == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(NOME));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
+            MovimentoDiario.viewMovimentoDiaDataTable dataTable = new MovimentoDiario.viewMovimentoDiaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -7844,8 +7669,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         private FALTOSOSTableAdapter _fALTOSOSTableAdapter;
         
         private MEDICOSTableAdapter _mEDICOSTableAdapter;
-        
-        private MOVIMENTO_TEMPTableAdapter _mOVIMENTO_TEMPTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7934,20 +7757,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public MOVIMENTO_TEMPTableAdapter MOVIMENTO_TEMPTableAdapter {
-            get {
-                return this._mOVIMENTO_TEMPTableAdapter;
-            }
-            set {
-                this._mOVIMENTO_TEMPTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -7985,10 +7794,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                             && (this._mEDICOSTableAdapter.Connection != null))) {
                     return this._mEDICOSTableAdapter.Connection;
                 }
-                if (((this._mOVIMENTO_TEMPTableAdapter != null) 
-                            && (this._mOVIMENTO_TEMPTableAdapter.Connection != null))) {
-                    return this._mOVIMENTO_TEMPTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -8015,9 +7820,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                     count = (count + 1);
                 }
                 if ((this._mEDICOSTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._mOVIMENTO_TEMPTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8076,15 +7878,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._mOVIMENTO_TEMPTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.MOVIMENTO_TEMP.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._mOVIMENTO_TEMPTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -8135,14 +7928,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._mOVIMENTO_TEMPTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.MOVIMENTO_TEMP.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._mOVIMENTO_TEMPTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -8153,14 +7938,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(MovimentoDiario dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._mOVIMENTO_TEMPTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.MOVIMENTO_TEMP.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._mOVIMENTO_TEMPTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._dESISTENCIASTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.DESISTENCIAS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -8265,11 +8042,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._mOVIMENTO_TEMPTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._mOVIMENTO_TEMPTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -8345,15 +8117,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                     if (this._mEDICOSTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._mEDICOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._mEDICOSTableAdapter.Adapter);
-                    }
-                }
-                if ((this._mOVIMENTO_TEMPTableAdapter != null)) {
-                    revertConnections.Add(this._mOVIMENTO_TEMPTableAdapter, this._mOVIMENTO_TEMPTableAdapter.Connection);
-                    this._mOVIMENTO_TEMPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._mOVIMENTO_TEMPTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._mOVIMENTO_TEMPTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._mOVIMENTO_TEMPTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._mOVIMENTO_TEMPTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -8433,10 +8196,6 @@ ORDER BY MEDICOS.APELIDO, VAGAS.PRONTUARIO";
                 if ((this._mEDICOSTableAdapter != null)) {
                     this._mEDICOSTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._mEDICOSTableAdapter]));
                     this._mEDICOSTableAdapter.Transaction = null;
-                }
-                if ((this._mOVIMENTO_TEMPTableAdapter != null)) {
-                    this._mOVIMENTO_TEMPTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._mOVIMENTO_TEMPTableAdapter]));
-                    this._mOVIMENTO_TEMPTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

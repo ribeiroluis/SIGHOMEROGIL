@@ -26,8 +26,8 @@ namespace SISHOMEROGIL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.5.124.101,1433;Network Library=DBMSSOCN;Initial Catalog=UBSHOMEROG" +
-            "IL;User ID=SA;Password=12345;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.5.124.82,1433;Network Library=DBMSSOCN;Initial Catalog=UBSHOMEROGI" +
+            "L;User ID=SA;Password=12345;")]
         public string UBSHOMEROGILConnectionString {
             get {
                 return ((string)(this["UBSHOMEROGILConnectionString"]));
@@ -37,8 +37,8 @@ namespace SISHOMEROGIL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SESA-10267;Initial Catalog=BDCEP;User ID=sa;Password=12345;Network Li" +
-            "brary=dbmslpcn")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.5.124.82,1433;Network Library=DBMSSOCN;Initial Catalog=UBSHOMEROGI" +
+            "L;User ID=SA;Password=12345;")]
         public string BDCEPConnectionString {
             get {
                 return ((string)(this["BDCEPConnectionString"]));
@@ -48,7 +48,8 @@ namespace SISHOMEROGIL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SESA-10267;Initial Catalog=UBSHOMEROGIL;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.5.124.82,1433;Network Library=DBMSSOCN;Initial Catalog=UBSHOMEROGI" +
+            "L;User ID=SA;Password=12345;")]
         public string UBSHOMEROGILConnectionString1 {
             get {
                 return ((string)(this["UBSHOMEROGILConnectionString1"]));

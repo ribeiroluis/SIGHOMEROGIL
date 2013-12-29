@@ -160,7 +160,7 @@ namespace SISHOMEROGIL
 
         private void senhasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSenhas senha = new frmSenhas();
+            frmSenhasAcolhimento senha = new frmSenhasAcolhimento();
             senha.Show();
         }
 

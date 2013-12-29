@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SISHOMEROGIL.BancoDados.ExemploDataSetTableAdapters;
+using SISHOMEROGIL.BancoDados.SenhasAcolhimentoTableAdapters;
 using System.Data;
 
 namespace SISHOMEROGIL.Controles
@@ -46,5 +46,7 @@ namespace SISHOMEROGIL.Controles
                 throw;
             }
         }
+
+
     }
 }

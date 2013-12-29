@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using SISHOMEROGIL.BancoDados.BDCEPDataSetTableAdapters;
-using SISHOMEROGIL.BancoDados.ExemploDataSetTableAdapters;
+using SISHOMEROGIL.BancoDados.BDCEPDataSetTableAdapters;
+//using SISHOMEROGIL.BancoDados.SenhasAcolhimentoTableAdapters;
 using System.Data;
 
 namespace SISHOMEROGIL.Controles
@@ -57,15 +57,6 @@ namespace SISHOMEROGIL.Controles
             }
         }
 
-        
-        /// <summary>
-        /// Instancie o objetoCEP com o atributo cep para executar este metodo
-        /// </summary>
-        public void PreecheCEPporCEP()
-        {
- 
-        }
-
         public bool PesquisaLogradouro()
         {
 
@@ -93,6 +84,10 @@ namespace SISHOMEROGIL.Controles
             }
         }
 
+        /// <summary>
+        /// Será preenchido o objeto CEP
+        /// Instancie o objetoCEP com o atributo cep para executar este metodo
+        /// </summary>
         public bool PesquisaCEP()
         {
 
@@ -119,6 +114,8 @@ namespace SISHOMEROGIL.Controles
                 throw;
             }
         }
+
+        
         
     }
 }

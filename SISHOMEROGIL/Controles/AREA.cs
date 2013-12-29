@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using SISHOMEROGIL.BancoDados.ExemploDataSetTableAdapters;
+using SISHOMEROGIL.BancoDados.SenhasAcolhimentoTableAdapters;
 
 namespace SISHOMEROGIL.Controles
 {
@@ -35,7 +35,9 @@ namespace SISHOMEROGIL.Controles
                 {
                     DataRow Linha = TB.Rows[0];
                     Enfermeiro.IdFuncionario = (int)Linha["IDENFERMEIRO_FUNCIONARIO"];
-                    Medico.IdFuncionario = (int)Linha["IDMEDICO_FUNCIONARIO"];
+                    var x = Linha["IDMEDICO_FUNCIONARIO"].ToString();
+                    if (!x.Equals(string.Empty))
+                        Medico.IdFuncionario = (int)Linha["IDMEDICO_FUNCIONARIO"];
                     Equipe = Linha["EQUIPE_AREA"].ToString();
                     return true;
                 }

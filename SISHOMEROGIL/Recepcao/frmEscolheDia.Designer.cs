@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.cbData = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbData = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEnviar
             // 
             this.btnEnviar.Image = global::SISHOMEROGIL.Properties.Resources.confirmar;
-            this.btnEnviar.Location = new System.Drawing.Point(274, 50);
+            this.btnEnviar.Location = new System.Drawing.Point(266, 89);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(95, 31);
             this.btnEnviar.TabIndex = 2;
@@ -47,18 +47,10 @@
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // cbData
-            // 
-            this.cbData.FormattingEnabled = true;
-            this.cbData.Location = new System.Drawing.Point(68, 56);
-            this.cbData.Name = "cbData";
-            this.cbData.Size = new System.Drawing.Size(174, 25);
-            this.cbData.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 36);
+            this.label1.Location = new System.Drawing.Point(89, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 17);
             this.label1.TabIndex = 0;
@@ -67,19 +59,27 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.cbData);
-            this.panel1.Controls.Add(this.btnEnviar);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnEnviar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 138);
+            this.panel1.Size = new System.Drawing.Size(494, 233);
             this.panel1.TabIndex = 3;
+            // 
+            // cbData
+            // 
+            this.cbData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cbData.Location = new System.Drawing.Point(92, 95);
+            this.cbData.Name = "cbData";
+            this.cbData.Size = new System.Drawing.Size(129, 25);
+            this.cbData.TabIndex = 3;
             // 
             // frmEscolheDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 138);
+            this.ClientSize = new System.Drawing.Size(494, 233);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -97,8 +97,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbData;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker cbData;
     }
 }

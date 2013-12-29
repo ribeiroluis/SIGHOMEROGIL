@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SISHOMEROGIL.BancoDados.ExemploDataSetTableAdapters;
+using SISHOMEROGIL.BancoDados.SenhasAcolhimentoTableAdapters;
 using System.Data;
 
 namespace SISHOMEROGIL.Controles
@@ -28,7 +28,13 @@ namespace SISHOMEROGIL.Controles
         {
             try
             {
-                DataTable TB = BDNumeros.PesquisaNumerosPorCEP(_CEP._CEP);
+                DataTable TB;
+
+                if (Complemento == null || Complemento.Equals(""))
+                    TB = BDNumeros.PesquisaNumerosPorCEPNumero(_CEP._CEP, Numero);
+                else
+                    TB = BDNumeros.PesquisaNumerosPorCEPComplemento(_CEP._CEP, Numero, Complemento);
+                
                 if (TB.Rows.Count < 1)
                     return false;
                 else
@@ -36,7 +42,6 @@ namespace SISHOMEROGIL.Controles
                     DataRow Linha = TB.Rows[0];
                     ID_NumMicroarea = (int)Linha["IDNUMMICROAREA_TBNUMEROMICROAREA"];
                     Microarea.idMicroarea = (int)Linha["NUM_MICROAREA"];
-                    Numero = (int)Linha["NUMERO"];
                     Complemento = Linha["COMPLEMENTO"].ToString();
                     return true;
                 }
@@ -51,8 +56,7 @@ namespace SISHOMEROGIL.Controles
         public bool PesquisaMicroarea()
         {
             try
-            {
-                
+            {                
                 
                 return true;
 
@@ -63,6 +67,53 @@ namespace SISHOMEROGIL.Controles
                 throw;
             }
  
+        }
+
+        public List<string> RetornaComplementos()
+        {
+            try
+            {
+                List<string> Listacomplementos = new List<string>();
+                DataTable TB = BDNumeros.PesquisaNumerosPorCEPNumero(_CEP._CEP, Numero);
+                foreach (DataRow linha in TB.Rows)
+                {
+                    Listacomplementos.Add(linha["COMPLEMENTO"].ToString());
+                }
+
+
+                return Listacomplementos;
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+
+        }
+
+        /// <summary>
+        /// Retorna a lista de numeros cadastrados pelo cep selecionado
+        /// </summary>
+        /// <returns>Lista de strings</returns>
+        public List<string> NumerosCadastrados()
+        {
+            try
+            {
+                List<string> ListaNumeros = new List<string>();
+                DataTable tb = BDNumeros.RetornaNumerosPorCEP(_CEP._CEP);
+
+                foreach (DataRow linha in tb.Rows)
+                {
+                    ListaNumeros.Add(linha["NUMERO"].ToString());
+                }
+                return ListaNumeros;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
 

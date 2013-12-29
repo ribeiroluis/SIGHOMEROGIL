@@ -249,6 +249,7 @@ namespace SISHOMEROGIL.PACS
                 dtgDados.DataSource = num.RetornaNumerosPorCEP(CEP,idMicroarea);
                 dtgDados.Columns["NUM_MICROAREA"].Visible = false;
                 dtgDados.Columns["CEP"].Visible = false;
+                dtgDados.Columns["IDNUMMICROAREA_TBNUMEROMICROAREA"].Visible = false;
             }
             catch (Exception err)
             {

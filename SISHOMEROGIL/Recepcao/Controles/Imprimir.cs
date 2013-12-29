@@ -101,6 +101,7 @@ namespace SISHOMEROGIL
             Porta.WriteLine("\t\tAguarde a sua vez!");
             Porta.WriteLine("\"UBS Homero Gil, INOVANDO POR UM SUS MELHOR.\"");
             Porta.WriteLine("\n\n\n\n\n\n\n");
+            //Porta.WriteLine("x6D");
             
             Fecha_Porta();
             /*"<bmp><tb><tb><tb><tb><b>UBS HOMERO GIL</tb></tb></tb></tb>" +
@@ -110,6 +111,41 @@ namespace SISHOMEROGIL
                 "Data: "+ DateTime.Now.ToShortDateString() + "<tb><tb>Hora: " + DateTime.Now.ToShortTimeString() +
             "</tb></tb>" + "<sl>1</sl>Aguarde sua vez!<l></l>\"UBS Homero Gil, Em Busca da Qualidade...\"<sl>6</sl>"*/
             
+        }
+
+        
+        /// <summary>
+        /// Imprime texto com a equipe
+        /// </summary>
+        /// <param name="titulo">Tipo da senha</param>
+        /// <param name="senha">num senha</param>
+        /// <param name="equipe">composicao da equipe</param>
+        public void imprimeTexto(string titulo, string senha, string equipe)
+        {
+            AbrePorta();
+            Porta.WriteLine("\t\t   UBS HOMERO GIL");
+            Porta.WriteLine("\t\tRua Divinópolis, 153");
+            Porta.WriteLine("\t\tTel.: 3595 - 7777");
+            Porta.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Porta.WriteLine("\x0E" + titulo + "\x14");
+            Porta.WriteLine("");
+            Porta.WriteLine(equipe);
+            Porta.WriteLine("\tSenha: " + "\x1B\x45\x0E" + senha + "\x1B\x46\x14");
+            Porta.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Porta.WriteLine("Data: " + DateTime.Now.ToShortDateString() + "\t\tHora: " + DateTime.Now.ToLongTimeString());
+            Porta.WriteLine("\t\tAguarde a sua vez!");
+            Porta.WriteLine("\"UBS Homero Gil, INOVANDO POR UM SUS MELHOR.\"");
+            Porta.WriteLine("\n\n\n\n\n\n\n");
+            //Porta.WriteLine("x6D");
+
+            Fecha_Porta();
+            /*"<bmp><tb><tb><tb><tb><b>UBS HOMERO GIL</tb></tb></tb></tb>" +
+                "<l></l>        Rua Divinópolis, 153<l></l>        Tel: 3595 - 7777</b></bmp>" +
+                "<tc>~</tc><l></l><e>Box Saud. Criança/Mulher</e><l></l><l></l><tb><tb>Senha:   <e><b>" + 
+                senha + "</b></e></tb></tb><l></l><tc>~</tc><l></l>" +
+                "Data: "+ DateTime.Now.ToShortDateString() + "<tb><tb>Hora: " + DateTime.Now.ToShortTimeString() +
+            "</tb></tb>" + "<sl>1</sl>Aguarde sua vez!<l></l>\"UBS Homero Gil, Em Busca da Qualidade...\"<sl>6</sl>"*/
+
         }
     }
 }

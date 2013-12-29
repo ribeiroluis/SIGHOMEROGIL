@@ -640,9 +640,6 @@ namespace SISHOMEROGIL.Recepcao
                     if (item < 65 || item > 90)
                     return false;
 
-                if (i < texto.Length)
-                    if (item.Equals(texto[i]))
-                        return false;
                 i++;                
             }
 
