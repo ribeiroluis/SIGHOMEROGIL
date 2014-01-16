@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SISHOMEROGIL.exe.manifest" size="6154">
+    <dependentAssembly dependencyType="install" codebase="SISHOMEROGIL.exe.manifest" size="6155">
       <assemblyIdentity name="SISHOMEROGIL.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4q+/qoqPGbwOtHEXOOvnEf+iE+0=</dsig:DigestValue>
+        <dsig:DigestValue>h4Us07lWAmVagh7ius/N964fxw4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

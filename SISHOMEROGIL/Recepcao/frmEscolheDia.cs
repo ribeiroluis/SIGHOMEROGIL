@@ -71,7 +71,8 @@ namespace SISHOMEROGIL.Recepcao
                     string data = cbData.Value.ToShortDateString();
                     DataTable tbMovimento = Movimento.RetornaMivimentosPorData(data);
                     string html = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">" +
-                    "<html><head><style media=\"screen\" type=\"text/css\"></style><title>Movimenento Dia: " + cbData.Value.ToLongDateString();
+                    "<html><head><style media=\"screen\" type=\"text/css\">@media print {p.test {font-family: 'Times New Roman','Comic Sans MS',Arial;font-size: 12pt;}"+
+                    "}</style><title>Movimenento Dia: " + cbData.Value.ToLongDateString();
                     html += "</title></head><body><h2>Movimento dia: " + cbData.Value.ToLongDateString();
                     html += "</h2><table border=\"1\"><tr><td style=\"background-color: #FFFFCC\">Medico</td> " +
                     "<td style=\"background-color: #FFFFCC\">Horario</td><td style=\"background-color: #FFFFCC\">" +

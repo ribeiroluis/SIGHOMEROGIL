@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISHOMEROGIL.exe" size="1853952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SISHOMEROGIL.exe" size="1795584">
       <assemblyIdentity name="SISHOMEROGIL" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UBcTAiddJu4pA2ZRcBzPQvkVVv0=</dsig:DigestValue>
+        <dsig:DigestValue>oS8a4B9QwSJApfRNlJ1A//3yIHo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,22 +75,22 @@
       <dsig:DigestValue>+YbajKYNOfSIMQhg7kQhDypTwmA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Recepcao\Controles\CSS.css" size="240">
+  <file name="Recepcao\Controles\CSS.css" size="461">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>lKubVK1viTpJuqvLJGSNgbRMQf4=</dsig:DigestValue>
+      <dsig:DigestValue>q1E5h4HIjqrEGeWkK+StxaKO7jU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Recepcao\Controles\Movimento.htm" size="863">
+  <file name="Recepcao\Controles\Movimento.htm" size="1092">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>WlgRINCqgIgLocKOCk/kwDFpv2E=</dsig:DigestValue>
+      <dsig:DigestValue>FJdnlvMjZW6WzmpGJoAyn3ebUso=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\brasaobetim.ico" size="63270">
