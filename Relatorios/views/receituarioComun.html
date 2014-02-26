@@ -1,0 +1,159 @@
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <!--scripts-->
+    <script src="../scripts/jquery/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="../scripts/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="../scripts/angular/angular.js" type="text/javascript"></script>
+    <script src="../controller/receiturarioComunViewModel.js" type="text/javascript"></script>
+    <script src="../models/userData.js" type="text/javascript"></script>
+
+    <!--styles-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<title>Receiturario Comun</title>
+<body ng-app="Receituario" ng-controller="IndexModel">
+<div>
+	<table border="1" class="tableReceituario">
+		<tr class="row0">		
+			<td class="column0">
+				<img src="../img/brasaobetim.gif" alt="PMB" class="img2"/>
+				<div>PREFEITURA MUNICIPAL DE BETIM</div>				
+			</td>
+			<td class="centralizar textoAumentado" style="width:264"><div style="font-size: large;margin-left: 60px;">RECEITUÁRIO</div></td>
+			<td>
+				<img src="../img/suslogo.png" alt="SUS" class="logoSUS img2" />
+			</td>			
+			<td class="column0">
+				<img src="../img/brasaobetim.gif" alt="PMB" class="img2"/>
+				<div>PREFEITURA MUNICIPAL DE BETIM</div>				
+			</td>
+			<td class="centralizar textoAumentado" style="width:264"><div style="font-size: large;margin-left: 60px;">RECEITUÁRIO</div></td>
+			<td>
+				<div style="width: 40px"> 
+					<img src="../img/suslogo.png" alt="SUS" class="logoSUS" />
+				</div>
+			</td>
+		</tr>
+		<tr class="row0">
+			<td colspan="3">
+				<div>Nome da Unidade:</div>
+				<span>UBS HOMERO GIL</span>
+			</td>
+			<td colspan="3">
+				<div>Nome da Unidade:</div>
+				<span>UBS HOMERO GIL</span>
+			</td>			
+		</tr>
+		<tr class="row0">
+			<td colspan="3">
+				<div>Nome:</div>
+				<span>{{Usuario.Nome}}</span>
+			</td>
+			<td colspan="3">
+				<div>Nome:</div>
+				<span>{{Usuario.Nome}}</span>
+			</td>
+		</tr>		
+		<tr class="row0">		
+			<td>
+				<div>Prontuario:</div>
+				<span>{{Usuario.Prontuario}}</span>
+			</td>
+			<td>
+				<div>CNS::</div>
+				<span>{{Usuario.CNS}}</span>
+			</td>
+			<td>
+				<div>Data:</div>
+				<span>{{Usuario.Data}}</span>
+			</td>
+			<td>
+				<div>Prontuario:</div>
+				<span>{{Usuario.Prontuario}}</span>
+			</td>
+			<td>
+				<div>CNS::</div>
+				<span>{{Usuario.CNS}}</span>
+			</td>
+			<td>
+				<div>Data:</div>
+				<span>{{Usuario.Data}}</span>
+			</td>
+		</tr>		
+		<tr class="row2">
+			<td colspan="3">
+				<div>Prescrição:</div>
+					<ul>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+					</ul>				
+			</td>
+			<td colspan="3">
+				<div>Prescrição:</div>
+					<ul>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+						<li>
+							<div>1) itens</div><span>50 comprimidos</span>
+							<div>posologia</div>
+						</li>
+					</ul>				
+			</td>			
+		</tr>
+		<tr class="row0">
+			<td colspan="3">
+				Carimbo e Assinatura:
+			</td>			
+			<td colspan="3">
+				Carimbo e Assinatura:
+			</td>			
+		</tr>
+		<tr class="row0">
+			<td colspan="3">
+				UBS HOMERO GIL</br>
+				Rua Divinópolis, 153 - Homero Gil - 32636111 </br>
+				Tel: 3595-7777 / 3532-8920 </br>
+				CNES: 2125927				
+			</td>			
+			<td colspan="3">				
+				UBS HOMERO GIL</br>
+				Rua Divinópolis, 153 - Homero Gil - 32636111 </br>
+				Tel: 3595-7777 / 3532-8920 </br>
+				CNES: 2125927				
+			</td>
+			</td>			
+		</tr>
+	</table>
+	
+</div>
+
+</body>
+</html>

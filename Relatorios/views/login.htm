@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <!--scripts-->
+    <script src="../scripts/jquery/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="../scripts/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="../scripts/angular/angular.js" type="text/javascript"></script>    
+    <script src="../models/userData.js" type="text/javascript"></script>
+    <script src="../controller/fichaAvulsaViewModel.js" type="text/javascript"></script>
+    <script src="../controller/loginViewModel.js" type="text/javascript"></script>
+    <script src="../controller/receiturarioComunViewModel.js" type="text/javascript"></script>
+
+    <!--styles-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+    
+
+    <title>Login</title>    
+</head>
+    
+
+<body ng-app="Login" ng-controller="IndexModel">
+    <form id="form" action="fichaAvulsa.html">
+        <div id="Entrada" class="content show">
+        <div class="panel panel-primary">
+            <div style="width: 40px"> 
+				<img src="../img/suslogo.png" alt="SUS" class="logoSUS" />
+			</div>
+            <span class="text-info text-center textoAumentado" style="padding:5%">Dados do usuário</span>
+            <div>
+            <div class="well well-sm">
+                <div>
+                    <span>Nome: </span><input id="UsuarioNome" type="text" name="usuarioNome" ng-model="Usuario.Nome" placeholder="Nome" class="inputMargin" required>                    
+                </div>
+                <br />
+                <div>
+                    <span>Data de Nascimento:</span>
+                    <input id="UsuarioData" type="date" ng-model="Usuario.Data" placeholder="01/01/2014" required class="inputMargin"></input>
+                </div>
+                <!--<div id="date">
+                    <span>Data de Nascimento:</span>
+                        <input data-format="dd/MM/yyyy" type="text" ng-model="Usuario.Data" placeholder="01/01/2014" class="input-append inputMargin" required></input>
+                        <span class="add-on iconeCalendario"><i data-date-icon="icon-calendar"></i></span>
+                 </div>-->
+                <br />
+                    <div>
+                        <span>Nome da mãe: </span><input id="UsuarioNomeMae" type="text" name="usuarioNomeMae" ng-model="Usuario.Mae" placeholder="Nome Mae" required class="inputMargin">
+                    </div>
+                    <br />
+                    <div>
+                        <span>Telefone: </span><input id="UsuarioTelefone" type="text" ng-model="Usuario.Telefone" placeholder="35328920" class="inputMargin">
+                    </div>
+                    <br />
+                    <div>
+                        <span>Endereço: </span><input id="UsuarioLogradouro" type="text" ng-model="Usuario.Logradouro" placeholder="Rua ...." class="inputMargin">
+                    </div>                     
+                </div>
+                <span class="span info"><a href="pacientesRelatorio.htm" target=_blank style="float: left;color: #000000;">Usuários cadastrados</a></span>
+         </div>
+            <button class="button butt" button id="btnMostrar">Enviar...</button>
+            <a href="http://www.alcsistemas.heliohost.org" target=_blank style="float: left;color: #FCFDFD;">Luis Ribeiro ®</a>            
+            <br />	        
+        </div>              
+        <!--<input type="button" value="Print this page" onclick="window.print()">        -->        
+     </div>        
+    </form>
+    </body>
+    </html>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mICROAREAS" targetNamespace="http://tempuri.org/mICROAREAS.xsd" xmlns:mstns="http://tempuri.org/mICROAREAS.xsd" xmlns="http://tempuri.org/mICROAREAS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="UBSHOMEROGILConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="UBSHOMEROGILConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BaseMicroareas.Properties.Settings.GlobalReference.Default.UBSHOMEROGILConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewNumerosMicroareaTableAdapter" GeneratorDataComponentClassName="viewNumerosMicroareaTableAdapter" Name="viewNumerosMicroarea" UserDataComponentName="viewNumerosMicroareaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="UBSHOMEROGILConnectionString (Settings)" DbObjectName="UBSHOMEROGIL.dbo.viewNumerosMicroarea" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IDAREA, NOMEAREA, MEDICO, ENFERMEIRO, AUXILIARTEC, MICROAREA, ACS, CEP, LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO FROM dbo.viewNumerosMicroarea</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDAREA" DataSetColumn="IDAREA" />
+              <Mapping SourceColumn="NOMEAREA" DataSetColumn="NOMEAREA" />
+              <Mapping SourceColumn="MEDICO" DataSetColumn="MEDICO" />
+              <Mapping SourceColumn="ENFERMEIRO" DataSetColumn="ENFERMEIRO" />
+              <Mapping SourceColumn="AUXILIARTEC" DataSetColumn="AUXILIARTEC" />
+              <Mapping SourceColumn="MICROAREA" DataSetColumn="MICROAREA" />
+              <Mapping SourceColumn="ACS" DataSetColumn="ACS" />
+              <Mapping SourceColumn="CEP" DataSetColumn="CEP" />
+              <Mapping SourceColumn="LOGRADOURO" DataSetColumn="LOGRADOURO" />
+              <Mapping SourceColumn="NUMERO" DataSetColumn="NUMERO" />
+              <Mapping SourceColumn="COMPLEMENTO" DataSetColumn="COMPLEMENTO" />
+              <Mapping SourceColumn="BAIRRO" DataSetColumn="BAIRRO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="UBSHOMEROGILConnectionString (Settings)" DbObjectName="UBSHOMEROGIL.dbo.viewNumerosMicroarea" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="RetornaMicroareasCadastradas" GetMethodModifier="Public" GetMethodName="RetornaMicroareasCadastradas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="RetornaMicroareasCadastradas" UserSourceName="RetornaMicroareasCadastradas">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDAREA, NOMEAREA, MEDICO, ENFERMEIRO, AUXILIARTEC, MICROAREA, ACS, CEP, LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO
+FROM            viewNumerosMicroarea
+ORDER BY MICROAREA, BAIRRO, LOGRADOURO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mICROAREAS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="mICROAREAS" msprop:Generator_UserDSName="mICROAREAS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="viewNumerosMicroarea" msprop:Generator_TableClassName="viewNumerosMicroareaDataTable" msprop:Generator_TableVarName="tableviewNumerosMicroarea" msprop:Generator_RowChangedName="viewNumerosMicroareaRowChanged" msprop:Generator_TablePropName="viewNumerosMicroarea" msprop:Generator_RowDeletingName="viewNumerosMicroareaRowDeleting" msprop:Generator_RowChangingName="viewNumerosMicroareaRowChanging" msprop:Generator_RowEvHandlerName="viewNumerosMicroareaRowChangeEventHandler" msprop:Generator_RowDeletedName="viewNumerosMicroareaRowDeleted" msprop:Generator_RowClassName="viewNumerosMicroareaRow" msprop:Generator_UserTableName="viewNumerosMicroarea" msprop:Generator_RowEvArgName="viewNumerosMicroareaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAREA" msprop:Generator_ColumnVarNameInTable="columnIDAREA" msprop:Generator_ColumnPropNameInRow="IDAREA" msprop:Generator_ColumnPropNameInTable="IDAREAColumn" msprop:Generator_UserColumnName="IDAREA" type="xs:int" />
+              <xs:element name="NOMEAREA" msprop:Generator_ColumnVarNameInTable="columnNOMEAREA" msprop:Generator_ColumnPropNameInRow="NOMEAREA" msprop:Generator_ColumnPropNameInTable="NOMEAREAColumn" msprop:Generator_UserColumnName="NOMEAREA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEDICO" msprop:Generator_ColumnVarNameInTable="columnMEDICO" msprop:Generator_ColumnPropNameInRow="MEDICO" msprop:Generator_ColumnPropNameInTable="MEDICOColumn" msprop:Generator_UserColumnName="MEDICO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENFERMEIRO" msprop:Generator_ColumnVarNameInTable="columnENFERMEIRO" msprop:Generator_ColumnPropNameInRow="ENFERMEIRO" msprop:Generator_ColumnPropNameInTable="ENFERMEIROColumn" msprop:Generator_UserColumnName="ENFERMEIRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUXILIARTEC" msprop:Generator_ColumnVarNameInTable="columnAUXILIARTEC" msprop:Generator_ColumnPropNameInRow="AUXILIARTEC" msprop:Generator_ColumnPropNameInTable="AUXILIARTECColumn" msprop:Generator_UserColumnName="AUXILIARTEC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MICROAREA" msprop:Generator_ColumnVarNameInTable="columnMICROAREA" msprop:Generator_ColumnPropNameInRow="MICROAREA" msprop:Generator_ColumnPropNameInTable="MICROAREAColumn" msprop:Generator_UserColumnName="MICROAREA" type="xs:int" />
+              <xs:element name="ACS" msprop:Generator_ColumnVarNameInTable="columnACS" msprop:Generator_ColumnPropNameInRow="ACS" msprop:Generator_ColumnPropNameInTable="ACSColumn" msprop:Generator_UserColumnName="ACS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CEP" msprop:Generator_ColumnVarNameInTable="columnCEP" msprop:Generator_ColumnPropNameInRow="CEP" msprop:Generator_ColumnPropNameInTable="CEPColumn" msprop:Generator_UserColumnName="CEP" type="xs:int" />
+              <xs:element name="LOGRADOURO" msprop:Generator_ColumnVarNameInTable="columnLOGRADOURO" msprop:Generator_ColumnPropNameInRow="LOGRADOURO" msprop:Generator_ColumnPropNameInTable="LOGRADOUROColumn" msprop:Generator_UserColumnName="LOGRADOURO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMERO" msprop:Generator_ColumnVarNameInTable="columnNUMERO" msprop:Generator_ColumnPropNameInRow="NUMERO" msprop:Generator_ColumnPropNameInTable="NUMEROColumn" msprop:Generator_UserColumnName="NUMERO" type="xs:int" minOccurs="0" />
+              <xs:element name="COMPLEMENTO" msprop:Generator_ColumnVarNameInTable="columnCOMPLEMENTO" msprop:Generator_ColumnPropNameInRow="COMPLEMENTO" msprop:Generator_ColumnPropNameInTable="COMPLEMENTOColumn" msprop:Generator_UserColumnName="COMPLEMENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BAIRRO" msprop:Generator_ColumnVarNameInTable="columnBAIRRO" msprop:Generator_ColumnPropNameInRow="BAIRRO" msprop:Generator_ColumnPropNameInTable="BAIRROColumn" msprop:Generator_UserColumnName="BAIRRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

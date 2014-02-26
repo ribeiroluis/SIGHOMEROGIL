@@ -1,0 +1,23 @@
+{
+  "Inversor_2_1_84_ENERGIA_TOTAL_A": {
+        "tag": "INV84_KWH_A_EA",
+        "measureContext": "Inversor 2.1.84",
+        "measureName": "Energia Total A",
+        "contextType": "Inversor",
+		"value" : 0
+    },
+	"Inversor_2_1_84_ENERGIA_TOTAL_B": {
+        "tag": "INV84_KWH_B_EA",
+        "measureContext": "Inversor 2.1.84",
+        "measureName": "Energia Total B",
+        "contextType": "Inversor",
+		"value" : 0
+    },
+	"Inversor_2_1_84_ENERGIA_TOTAL_C": {
+        "tag": "INV84_KWH_C_EA",
+        "measureContext": "Inversor 2.1.84",
+        "measureName": "Energia Total C",
+        "contextType": "Inversor",
+		"value" : 0
+    }
+}

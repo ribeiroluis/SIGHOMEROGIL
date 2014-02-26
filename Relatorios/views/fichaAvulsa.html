@@ -1,0 +1,141 @@
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <!--scripts-->
+    <script src="../scripts/jquery/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="../scripts/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="../scripts/angular/angular.js" type="text/javascript"></script>
+    <script src="../controller/fichaAvulsaViewModel.js" type="text/javascript"></script>
+
+    <!--styles-->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../css/bootstrap/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />    
+</head>
+<title>Ficha Avulsa</title>
+<body ng-app="fichaAvulsa" ng-controller="IndexModel">    
+    <!--<div id="Entrada" class="content show" onbeforecopy="return Entrada_onbeforecopy()">
+        <div class="panel panel-primary">
+            <img src="../img/suslogo.png" alt="SUS" class="logoSUS" />
+            <span class="text-info text-center textoAumentado" style="padding:5%">Dados do usuário</span>
+            <div>
+            <div class="well well-sm">
+                <div>
+                    <span>Nome: </span><input id="UsuarioNome" type="text" name="usuarioNome" ng-model="Usuario.Nome" placeholder="Nome" class="inputMargin" required>                    
+                </div>
+                <br />
+                <div>
+                    <span>Data de Nascimento:</span>
+                    <input id="UsuarioData" type="date" ng-model="Usuario.Data" placeholder="01/01/2014" required class="inputMargin"></input>
+                </div>                
+                <br />
+                    <div>
+                        <span>Nome da mãe: </span><input id="UsuarioNomeMae" type="text" name="usuarioNomeMae" ng-model="Usuario.Mae" placeholder="Nome Mae" required class="inputMargin">
+                    </div>
+                    <br />
+                    <div>
+                        <span>Telefone: </span><input id="UsuarioTelefone" type="text" ng-model="Usuario.Telefone" placeholder="35328920" class="inputMargin">
+                    </div>
+                    <br />
+                    <div>
+                        <span>Endereço: </span><input id="UsuarioLogradouro" type="text" ng-model="Usuario.Logradouro" placeholder="Rua ...." class="inputMargin">
+                    </div>                     
+                </div>
+         </div>
+            <button class="button butt" button id="btnMostrar">Enviar...</button>
+            <a href="http://www.alcsistemas.heliohost.org" target=_blank style="float: left;color: #FCFDFD;">Luis Ribeiro ®</a>            
+            <br />	        
+        </div>                      
+     </div>-->
+     
+    <div id="_fichaAvulsa">
+        <table border="1">
+            <tr class="titulos textoAumentado">
+                <td style="width: 250px">
+                    <img src="../img/brasaobetim.gif" alt="PMB"/>
+                    <div class="centralizar">PREFEITURA MUNICIPAL DE BETIM</div>
+                </td>
+                <td>
+                    <div>SECRETARIA MUNICIPAL DE SAUDE</div>
+                    <div>UNIDADE: UBS HOMERO GIL</div>
+                </td>
+                <td>
+                   <div style="width: 40px"> 
+						<img src="../img/suslogo.png" alt="SUS" class="logoSUS" />
+					</div>
+                </td>
+             </tr>
+             <tr class="titulos textoAumentado CorFundo">
+                <td colspan="3">FICHA AVULSA ADULTO / MULHER / IDOSO / CRIANÇA</td>
+             </tr>
+             <!--<tr >
+                <td class="titulos">FICHA AVULSA</td>
+                <td colspan="2">DATA CONSULTA: 
+                    <div>
+                        <span>{{Data | date: short}}</span>
+                    </div>
+                </td>
+              </tr>-->               
+              <tr>
+                <td colspan="3">NOME: <span>{{Usuario.Nome.toUpperCase()}}</span></td>
+              </tr>
+              <tr>
+                <td colspan="3" >NOME DA MÃE: <span>{{Usuario.Mae.toUpperCase()}}</span></td>
+              </tr>
+              <tr>
+                <td>IDADE: <span>{{Usuario.Idade.toUpperCase()}}</span></td>
+                <td colspan="2">TELEFONE: <span>{{Usuario.Telefone.toUpperCase()}}</span></td>
+              </tr>
+              <tr>
+                <td colspan="3">END: <span>{{Usuario.Logradouro.toUpperCase()}}</span></td>
+              </tr>
+              <tr>
+                <td colspan="3">INFORMANTE:</td>
+              </tr>
+              <tr class="row100">
+                <td colspan="3">QUEIXA PRINCIPAL E MOLESTIA ATUAL:</td>
+              </tr>
+              <tr  class="row100 row150">
+                <td colspan="3">HISTORIA PREGRESSA (VACINAÇÃO, ALIMENTAÇÃO, DOENÇAS ANTERIORES, ETILISMO, TABAGISMO,USO DE DROGAS E HISTORIA GINECOLOGICA/OBSTÉTRICA OU UROLÓGICA)</td>
+              </tr>
+              <tr class="row100">
+                <td colspan="3">HISTORIA FAMILIAR E HISTORIA SOCIAL:</td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                EXAME FÍSICO:
+                <br />
+                PESO: _________ (PERCENTIL: ____) ESTATURA: _________&nbsp; (PERCENTIL: _____)
+                <br /><br />
+                PC: ____________ (PERCENTIL: ____) TAX: _____________ºC
+                <br /><br />
+                PA: __________X ___________ (PERCENTIL: ______)
+                </td>
+              </tr>
+              <tr>
+                <td>ECTOSCOPIA:</td>
+                <td>OROSCOPIA:</td>
+                <td>OTOSCOPIA:</td>
+               </tr>
+               <tr>
+                <td colspan="3">AVC:</td>
+               </tr>
+               <tr>
+                <td colspan="3">AR:</td>
+               </tr>
+               <tr>
+                <td colspan="3">AD:</td>
+               </tr>
+               <tr>
+                <td colspan="3">OUTROS</td>
+               </tr>
+               <tr>
+                <td colspan="3">HIPÓTESE DIAGNÓSTICAS:</td>
+               </tr>
+               <tr class="row100">
+                <td colspan="3">CONDUTA: </td>
+               </tr>
+           </table>
+   </div>
+     </body>
+</html>

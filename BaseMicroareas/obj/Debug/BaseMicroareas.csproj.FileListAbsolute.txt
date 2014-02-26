@@ -1,0 +1,6 @@
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BaseMicroareas\bin\Debug\BaseMicroareas.exe.config
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BaseMicroareas\bin\Debug\BaseMicroareas.exe
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BaseMicroareas\bin\Debug\BaseMicroareas.pdb
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BaseMicroareas\obj\Debug\BaseMicroareas.exe
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BaseMicroareas\obj\Debug\BaseMicroareas.pdb
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BaseMicroareas\obj\Debug\BaseMicroareas.csprojResolveAssemblyReference.cache

@@ -1,0 +1,13 @@
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\BasePacientes\bin\Debug\BasePacientes.exe
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\BasePacientes\bin\Debug\BasePacientes.pdb
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\BasePacientes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\BasePacientes\obj\x86\Debug\BasePacientes.exe
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\BasePacientes\obj\x86\Debug\BasePacientes.pdb
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\BasePacientes\bin\Debug\BasePacientes.exe.config
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\bin\Debug\BasePacientes.exe.config
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\bin\Debug\BasePacientes.exe
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\bin\Debug\BasePacientes.pdb
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\obj\x86\Debug\BasePacientes.csprojResolveAssemblyReference.cache
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\obj\x86\Debug\BasePacientes.exe
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\BasePacientes\obj\x86\Debug\BasePacientes.pdb

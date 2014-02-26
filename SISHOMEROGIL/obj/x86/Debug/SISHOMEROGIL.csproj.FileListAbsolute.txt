@@ -105,17 +105,55 @@ C:\Users\Carina Freire Ribeir\Desktop\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SI
 C:\Users\Carina Freire Ribeir\Desktop\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.application
 C:\Users\Carina Freire Ribeir\Desktop\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.exe
 C:\Users\Carina Freire Ribeir\Desktop\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.pdb
-C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe.config
-C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.exe
-C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.pdb
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\Recepcao\Controles\CSS.css
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\Recepcao\Controles\Movimento.htm
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe.config
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe.manifest
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.application
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.pdb
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Acolhimento.frmInserirVagas.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Administrador.frmGerenciaUsuarios.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.atendimentoMedico.View.frmAtendimentoMedico.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Especialidades.Interface.frmAutoCusto.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmBuscaCEP.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmBuscaReceita.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmCarregaInformacoes.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmDispensacao.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmEstoqueFarmacia.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmLogin.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmMenuPrincipal.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmModelo.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmMotivoBaixa.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmNomesUsuarios.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmTelaSplash.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.PACS.frmMicroareas.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Properties.Resources.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Recepcao.frmAtendimentoMovimento.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Recepcao.frmEscolheDia.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Recepcao.frmMovimentoDiario.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Recepcao.frmSenhas.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Recepcao.frmSenhasAcolhimento.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Recepcao.frmVisualizaFaltosos.resources
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.exe.manifest
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.application
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.exe
+C:\Documents and Settings\luishr\Meus documentos\Projetos\SISHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.pdb
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\Recepcao\Controles\CSS.css
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\Recepcao\Controles\Movimento.htm
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe.config
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe.manifest
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.application
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.exe
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\bin\Debug\SISHOMEROGIL.pdb
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.csprojResolveAssemblyReference.cache
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Acolhimento.frmInserirVagas.resources
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Administrador.frmGerenciaUsuarios.resources
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.atendimentoMedico.View.frmAtendimentoMedico.resources
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.Especialidades.Interface.frmAutoCusto.resources
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmBuscaCEP.resources
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.frmBuscaReceita.resources
@@ -139,5 +177,5 @@ C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.csproj.GenerateResource.Cache
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.exe.manifest
 C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.application
-C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.atendimentoMedico.View.frmAtendimentoMedico.resources
-C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.csprojResolveAssemblyReference.cache
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.exe
+C:\Users\Carina Freire Ribeir\Documents\Projetos\SIGHOMEROGIL\SISHOMEROGIL\obj\x86\Debug\SISHOMEROGIL.pdb
