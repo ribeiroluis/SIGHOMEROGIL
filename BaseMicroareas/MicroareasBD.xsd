@@ -38,7 +38,7 @@
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        IDAREA, NOMEAREA, MEDICO, ENFERMEIRO, AUXILIARTEC, MICROAREA, ACS, CEP, LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO
 FROM            viewNumerosMicroarea
-ORDER BY MICROAREA, BAIRRO, LOGRADOURO</CommandText>
+ORDER BY NOMEAREA, MICROAREA, BAIRRO, LOGRADOURO, NUMERO</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -53,7 +53,7 @@ ORDER BY MICROAREA, BAIRRO, LOGRADOURO</CommandText>
   <xs:element name="mICROAREAS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="mICROAREAS" msprop:Generator_UserDSName="mICROAREAS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="viewNumerosMicroarea" msprop:Generator_TableClassName="viewNumerosMicroareaDataTable" msprop:Generator_TableVarName="tableviewNumerosMicroarea" msprop:Generator_RowChangedName="viewNumerosMicroareaRowChanged" msprop:Generator_TablePropName="viewNumerosMicroarea" msprop:Generator_RowDeletingName="viewNumerosMicroareaRowDeleting" msprop:Generator_RowChangingName="viewNumerosMicroareaRowChanging" msprop:Generator_RowEvHandlerName="viewNumerosMicroareaRowChangeEventHandler" msprop:Generator_RowDeletedName="viewNumerosMicroareaRowDeleted" msprop:Generator_RowClassName="viewNumerosMicroareaRow" msprop:Generator_UserTableName="viewNumerosMicroarea" msprop:Generator_RowEvArgName="viewNumerosMicroareaRowChangeEvent">
+        <xs:element name="viewNumerosMicroarea" msprop:Generator_TableClassName="viewNumerosMicroareaDataTable" msprop:Generator_TableVarName="tableviewNumerosMicroarea" msprop:Generator_TablePropName="viewNumerosMicroarea" msprop:Generator_RowDeletingName="viewNumerosMicroareaRowDeleting" msprop:Generator_RowChangingName="viewNumerosMicroareaRowChanging" msprop:Generator_RowEvHandlerName="viewNumerosMicroareaRowChangeEventHandler" msprop:Generator_RowDeletedName="viewNumerosMicroareaRowDeleted" msprop:Generator_UserTableName="viewNumerosMicroarea" msprop:Generator_RowChangedName="viewNumerosMicroareaRowChanged" msprop:Generator_RowEvArgName="viewNumerosMicroareaRowChangeEvent" msprop:Generator_RowClassName="viewNumerosMicroareaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDAREA" msprop:Generator_ColumnVarNameInTable="columnIDAREA" msprop:Generator_ColumnPropNameInRow="IDAREA" msprop:Generator_ColumnPropNameInTable="IDAREAColumn" msprop:Generator_UserColumnName="IDAREA" type="xs:int" />

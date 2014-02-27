@@ -1082,7 +1082,7 @@ namespace BaseMicroareas.mICROAREASTableAdapters {
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT        IDAREA, NOMEAREA, MEDICO, ENFERMEIRO, AUXILIARTEC, MICROAREA, ACS, " +
                 "CEP, LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO\r\nFROM            viewNumerosMicroar" +
-                "ea\r\nORDER BY MICROAREA, BAIRRO, LOGRADOURO";
+                "ea\r\nORDER BY NOMEAREA, MICROAREA, BAIRRO, LOGRADOURO, NUMERO";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

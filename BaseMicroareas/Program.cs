@@ -24,6 +24,8 @@ namespace BaseMicroareas
             var _auxmicroarea = tbmicros.Rows[0]["MICROAREA"].ToString();
             var _auxbairro = tbmicros.Rows[0]["BAIRRO"].ToString();
             var _auxrua = tbmicros.Rows[0]["LOGRADOURO"].ToString();
+            var _auxArea = tbmicros.Rows[0]["IDAREA"].ToString();
+            escreve2.WriteLine("AREA: " + _auxArea.PadLeft(3, '0')  + tbmicros.Rows[0]["NOMEAREA"].ToString());           
             escreve2.WriteLine("MICROAREA: " + _auxmicroarea.PadLeft(3, '0'));           
             escreve2.WriteLine("BAIRRO: " + _auxbairro);
             escreve2.WriteLine("\nLOGRADOURO: " + _auxrua);
@@ -75,10 +77,12 @@ namespace BaseMicroareas
                 }
                 else
                 {
+                    _auxArea = linha["IDAREA"].ToString();
                     _auxmicroarea = linha["MICROAREA"].ToString();
                     _auxbairro = linha["BAIRRO"].ToString();
                     _auxrua = linha["LOGRADOURO"].ToString();
-                    escreve2.WriteLine("\n\nMICROAREA: " + _auxmicroarea.PadLeft(3, '0'));
+                    escreve2.WriteLine("\n\nAREA: " + _auxArea.PadLeft(3, '0') + linha["NOMEAREA"].ToString() );   
+                    escreve2.WriteLine("\nMICROAREA: " + _auxmicroarea.PadLeft(3, '0'));
                     escreve2.WriteLine("BAIRRO: " + _auxbairro);
                     escreve2.WriteLine("\nLOGRADOURO: " + _auxrua);                    
                     Debug.WriteLine("\nMICROAREA: 0" + _auxmicroarea);
